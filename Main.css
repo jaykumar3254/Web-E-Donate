@@ -1,0 +1,35 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar Styles */
+    .navbar {
+      display: flex;
+      background-color: #000000;
+      padding: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    .navbar a.active {
+      background-color: #e30505;
+      text-align: center;
+    }
+    .navbar .right {
+      margin-right: auto;
+    }
+    .navbar .img {
+        height: 20px;
+    }
