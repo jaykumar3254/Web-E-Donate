@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizontal Navigation Bar</title>
-  <link rel="stylesheet" href="Main.css"/>
-  <link rel="stylesheet" href="Main.js"/>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD</title>
+    <link rel="stylesheet" href="cssForMain.css"> <!-- Link to external CSS -->
 </head>
 <body>
- <nav>
-  <div class="navbar">
-    <img src="logo.png" height="50px" width="50px"/>
-    <a class="right"></a>
-    <a>Covid-19 Support</a>
-    <a>CNCP</a>
-    <a>What We Do</a>
-    <a>Volunteer</a>
-    <a class="active"><b>DONATE</b></a>
-  </div>
-  </nav>
-  <div class="video-wrapper">
-    <video playsinline autoplay muted loop poster="cake.jpg">
-      <source src="C:\Users\jpard\Web-E-Donate\content\new.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-      <h1 style="align-self: center;" class="header">WE KNOW YOU <h1 class="yellowbox">#CARE!</h1></h1>
-      <h1 class="text1">Meet Gargi she is from district of rajasthan , lost her father at age of 5 ..... We can help her !!</h1>
-
+    <nav class="navbar">
+        <img class="logo" src="logo.png"/>
+        <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
+        <a href="#about" class="nav-button">CNCP</a>
+        <a href="#services" class="nav-button">WHAT WE DO</a>
+        <a href="#portfolio" class="nav-button">VOLUNTEER</a>
+        <a href="#contact" class="nav-button active">DONATE</a>
+    </nav>
+    <div>
+        <video playsinline autoplay muted loop poster>
+            <source class="" src="content/new.mp4" type="video/mp4"/>
+        </video>
+        <h1 class="video-text">WE KNOW YOU <h1 class="video-textactive">#CARE!</h1></h1>
+        <h1 class="video-text2">Meet Gargi she is from district of rajasthan , lost her father at age of 5 ..... We can help her !!</h1>
+    </div>
+    <div class="video-container">
+        <img class="imgs" src="content/bacccha.jpg"/>
+        <div class="overlay-box">
+            <h1 class="imgtextactive">TAKE ACTION:</h1>
+            <h1 >join us today </h1>
+        </div>
+    </div>
 </body>
 </html>
