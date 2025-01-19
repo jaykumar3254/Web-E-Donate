@@ -1,0 +1,127 @@
+/* General styles for the body */
+body {
+    margin: 0;
+    margin-top: 60px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+html{
+    overflow-y: scroll;
+}
+.navbar {
+    contain: content;
+    display: flex;
+    height: 40px; /* Adjusted height for better visibility */
+    justify-content: flex-end; /* Align elements to the right */
+    background-color: black; /* Dark background color */
+    padding: 20px 10px; /* Add some padding */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Ensure it stays at the top */
+    left: 0; /* Stretch to the full width of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it appears above other elements */
+    
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.overlay-box {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    color: aliceblue;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 20px;
+    text-align: left;
+}
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Button styles */
+.nav-button {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    padding: 10px 10px; /* Padding around the text */
+    margin: 5 10px; /* Space between buttons */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid transparent; /* Border for hover effect */
+    border-radius: 0px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect */
+.nav-button:hover {
+    border-color: red; /* Add border on hover */
+}
+
+/* Active button styles */
+.active {
+    background-color: red; /* Highlighted background */
+    color: white; /* White text */
+    border-color: rgb(105, 13, 13); /* Border matching active background */
+}
+.video-text {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+}
+.video-textactive {
+    position: absolute;
+    top: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    color: rgb(89, 89, 89);
+    background-color: rgb(255, 255, 103);
+    font-size: 44px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+}
+.logo {
+    align-self: flex-start;
+    height: 60px;
+    width: 60px;
+}
+.imgtextactive {
+    font-family: 'Times New Roman', Times, serif;
+    transform: translate(-50%, -50%);
+    color: rgb(89, 89, 89);
+    background-color: rgb(255, 255, 103);
+    font-size: 44px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+}
+.video-text2 {
+    position: absolute;
+    top: 85%;
+    left: 52.3%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    text-align: left;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.imgs{
+    width: 100%;
+}
