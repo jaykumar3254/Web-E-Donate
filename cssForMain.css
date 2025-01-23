@@ -100,13 +100,17 @@ video {
 }
 .imgtextactive {
     font-family: 'Times New Roman', Times, serif;
-    transform: translate(-50%, -50%);
+    position: absolute;
+     top: 50%;
+     left: 0%;
+     transform: translate(-50%, -150%);
+    margin: 0; /* Reset any existing margins */
     color: rgb(89, 89, 89);
     background-color: rgb(255, 255, 103);
-    font-size: 44px;
+    font-size: 30px;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-    text-align: center;
+    text-align: top;
     padding: 10px;
 }
 .video-text2 {
@@ -124,4 +128,25 @@ video {
 
 .imgs{
     width: 100%;
+}
+.texthr2{
+
+    font-family: 'Times New Roman', Times, serif    ;
+}
+.overlay-box2 {
+    position: absolute;
+    top: 60%;
+    right: -10%;
+    color: aliceblue;
+    transform: translate(-30%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 400px;
+    text-align: right;
+}
+.text1box2{
+   position: absolute;
+   text-align: left;
+    font-size: 30px;
+    color: white;
+   
 }
