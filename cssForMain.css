@@ -158,12 +158,60 @@ video {
     padding: 100px;
     text-align: right;
 }
+
 .text1box2{
    position: absolute;
    text-align: right;
     font-size: 30px;
     color: white;
    
+}
+.imgcontainer{
+
+    position: relative;
+}
+#map{
+    position: absolute;
+    height: 700px;
+    width: 650px;
+    top: 100px;
+    left: 20px;
+    right: 60px;
+}
+.overlay-box3 {
+    position: absolute;
+    top: 90%;
+    color: aliceblue;
+    transform: translate(330%, -180%);
+    padding: 100px;
+    text-align: right;
+}
+.livecount{
+    font-size: 65px;
+    color: #ed1849 
+    
+}
+.border1{
+    border: #fff;
+    border-radius: 50px;
+    border-color: #fff;
+    font-size: 55px;
+    border-style: groove;
+    border-left: 20px;
+    text-align: center;
+
+}
+.overlay-box4 {
+    position: absolute;
+    font-size: 11px;
+    top: 170%;
+    border: #fff;
+    border-radius: 10px;
+    border-style: double;
+    color: aliceblue;
+    transform: translate(285%, 500%);
+    padding: 10px;
+    text-align: center;
 }
 
     
