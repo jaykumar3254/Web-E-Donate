@@ -76,7 +76,9 @@ video {
 .nav-button:hover {
     border-color: red; /* Add border on hover */
 }
-
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+}
 /* Active button styles */
 .active {
     background-color: red; /* Highlighted background */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head style="background-color: black;">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAD</title>
+        <link rel="stylesheet" href="oldagehome.css">
+    </head>
+    <body style="background-color: black;">
+        <nav class="navbar">
+            <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
+            <a href="#about" class="nav-button">CNCP</a>
+            <a href="#services" class="nav-button">WHAT WE DO</a>
+            <a href="#portfolio" class="nav-button">VOLUNTEER</a>
+            <a href="#contact" class="nav-button active">DONATE</a>
+        </nav>
+        <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <img class="backimgs" src="content/bacccha.jpg" />-->
+        <form action="submit_donation.php" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="amount">Donation Amount ($):</label>
+            <input type="number" id="amount" name="amount" min="1" required>
+    
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">BHIM-UPI</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select>
+    
+            <button type="submit">Donate Now</button>
+        </form>
+    </body>
+</html>
