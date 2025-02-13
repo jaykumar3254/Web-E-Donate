@@ -145,7 +145,7 @@ button:hover {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-@keyframes beat {
+@keyframes beat2 {
     0%, 100% {
         transform: scale(1);
         box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
@@ -175,4 +175,109 @@ position: absolute;
     width: 100%;
     max-width: 100%;
     margin: auto;
+}
+.faq-container {
+    max-width: 60%;
+    margin: auto;
+}
+details {
+    background: #222;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+/* Google-like dropdown arrow */
+summary::after {
+    content: '▸'; /* Right arrow */
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+/* Rotate arrow when open */
+details[open] summary::after {
+    transform: rotate(90deg); /* Downward arrow */
+}
+details[open] {
+    background: #333;
+}
+
+/* Smooth expand and collapse */
+.faq-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+p {
+    color: #ccc;
+}
+
+
+
+
+
+.heart-container {
+    position: relative;
+    padding-top: 180px;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+}
+
+.main-heart {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff4757;
+    transform: rotate(-45deg);
+    animation: beat 1.5s infinite, glow 1.5s infinite;
+}
+
+.main-heart::before,
+.main-heart::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff4757;
+    border-radius: 50%;
+}
+
+.main-heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.main-heart::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes beat1 {
+    0%, 100% {
+        transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #ff4757, 0 0 20px #ff4757, 0 0 30px #ff4757;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff4757, 0 0 40px #ff4757, 0 0 60px #ff4757;
+    }
 }

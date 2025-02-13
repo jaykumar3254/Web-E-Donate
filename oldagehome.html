@@ -58,5 +58,96 @@
                     </div>
                 </body>
             </div>
+            <div class="faq-container">
+                <h2>People also ask</h2>
+        
+                <details>
+                    <summary>Why does egg exist?</summary>
+                    <div class="faq-content">
+                        <p>Eggs exist as a reproductive method for many species, providing nutrients for the developing embryo.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What is the purpose of an egg?</summary>
+                    <div class="faq-content">
+                        <p>The purpose of an egg is to protect and nurture the embryo until it is ready to hatch.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What is the point of an egg?</summary>
+                    <div class="faq-content">
+                        <p>Eggs serve as a biological structure for reproduction and food for many organisms.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>Why do we have no eggs?</summary>
+                    <div class="faq-content">
+                        <p>Maybe you forgot to buy them! Or perhaps you're asking about egg production in a biological sense.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Why do we have no eggs?</summary>
+                    <div class="faq-content">
+                        <p>Maybe you forgot to buy them! Or perhaps you're asking about egg production in a biological sense.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Why do we have no eggs?</summary>
+                    <div class="faq-content">
+                        <p>Maybe you forgot to buy them! Or perhaps you're asking about egg production in a biological sense.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Why do we have no eggs?</summary>
+                    <div class="faq-content">
+                        <p>Maybe you forgot to buy them! Or perhaps you're asking about egg production in a biological sense.</p>
+                    </div>
+                </details>
+            </div>
+            <script>
+                const details = document.querySelectorAll("details");
+        
+                details.forEach((targetDetail) => {
+                    targetDetail.addEventListener("click", function () {
+                        // Close other open details
+                        details.forEach((detail) => {
+                            if (detail !== targetDetail) {
+                                detail.removeAttribute("open");
+                                let content = detail.querySelector(".faq-content");
+                                content.style.maxHeight = "0";
+                                content.style.opacity = "0";
+                            }
+                        });
+        
+                        // Handle opening animation
+                        let content = this.querySelector(".faq-content");
+                        if (this.hasAttribute("open")) {
+                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                            content.style.opacity = "1";
+                        } else {
+                            content.style.maxHeight = "0"; // Collapse
+                            content.style.opacity = "0";
+                        }
+                    });
+        
+                    targetDetail.addEventListener("toggle", function () {
+                        let content = this.querySelector(".faq-content");
+                        if (this.open) {
+                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                            content.style.opacity = "1";
+                        } else {
+                            content.style.maxHeight = "0"; // Collapse
+                            content.style.opacity = "0";
+                        }
+                    });
+                });
+            </script>
+            <div class="heart-container">
+                <div class="main-heart"></div>
+            </div>
+            <script src="oldagehome.js"></script>
     </body>
 </html>
