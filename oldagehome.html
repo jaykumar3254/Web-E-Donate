@@ -23,8 +23,21 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
     
-            <label for="amount">Donation Amount ($):</label>
-            <input type="number" id="amount" name="amount" min="1" required>
+            <label for="amount">Donation Amount (Rs):</label>
+            <!--<input type="number" id="amount" name="amount" min="1" required>            -->
+            <div style="display: flex; gap: 2px;">
+                <button class="btn">One Time</button>
+                <button class="btn">Monthly</button>
+            </div>
+            <div style="display: flex; gap: 2px;">
+                <button class="btn1">1000</button>
+                <button class="btn1">1500</button>
+                <button class="btn1">2000</button>
+            </div>
+            <div style="display: flex; gap: 10px; padding-top: 15px; padding-bottom: 15px;">
+                <label>Enter your own amount :</label>
+                <input type="number" id="amount" min="1000"/>
+            </div>
     
             <label for="payment">Payment Method:</label>
             <select id="payment" name="payment">
@@ -33,7 +46,17 @@
                 <option value="bank_transfer">Bank Transfer</option>
             </select>
     
-            <button type="submit">Donate Now</button>
+            <button class="beat-button" type="submit">Donate Now</button>
         </form>
+            <div class="video-container">
+                <body>
+                    <img style="position: relative; width: 95%; margin-top: 120px; padding: 40px;" src="content/dadiji1.webp"/>
+                    <div class="ov1">
+                        <h2>It's not how much we give but how much love we put in giving </h2>
+
+
+                    </div>
+                </body>
+            </div>
     </body>
 </html>
