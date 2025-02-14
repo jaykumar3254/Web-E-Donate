@@ -24,3 +24,11 @@ function createLittleHeart() {
 
 // Create little hearts every 500ms
 setInterval(createLittleHeart, 500);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const digits = document.querySelectorAll(".digit");
+
+    digits.forEach((digit, index) => {
+        digit.style.animationDelay = `${index * 0.5}s`;
+    });
+});
