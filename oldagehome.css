@@ -78,8 +78,8 @@ form {
     max-width: 600px;
     margin: auto;
     padding: 70px;
-    border: 3px solid white;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
     background-color: black;
 }
 label {
@@ -163,11 +163,13 @@ button:hover {
 position: absolute;
     top: 40%;
     left: 60%;
+    right: 10%;
     color: aliceblue;
+    border-radius: 10px;
     transform: translate(5%, -60%);
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
     padding: 60px;
-    text-align: right;
+    text-align: center;
 }
 
 .video-container {
@@ -179,6 +181,8 @@ position: absolute;
 .faq-container {
     padding-top: 10%;
     position: relative;
+    padding-bottom: 60px;
+    color: #ccc;
     top: 20%;
     max-width: 60%;
     margin: auto;
@@ -222,8 +226,9 @@ details[open] {
     opacity: 0;
     transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
-p {
+.paragraph {
     color: #ccc;
+    font-weight: 10px;
 }
 
 
