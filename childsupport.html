@@ -6,7 +6,7 @@
     <title>Child Help Donation</title>
     <link rel="stylesheet" href="childsupport.css"/>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <script src="childsupport.js" defer></script> <!-- Use defer to load after DOM -->
+    <script src="childsupport.js" defer></script> <!-- Load script after DOM -->
 </head>
 <body>
     <nav class="navbar">
@@ -16,28 +16,19 @@
         <a href="#portfolio" class="nav-button">VOLUNTEER</a>
         <a href="#contact" class="nav-button active">DONATE</a>
     </nav>
+
+    <!-- Typewriter Text Overlay -->
+    <div class="typewriter-container">
+        <h1 class="typewriter-text"></h1>
+    </div>
+
+    <img src="content/study_web.jpg" height="40%" width="100%"/>
     
-    <section>
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="content/slideimg1 (1).jpg" alt="Child in need">
-                <div class="text-overlay">Help Provide Food & Shelter</div>
-            </div>
-            <div class="slide fade">
-                <img src="content/slideimg2.jpg" alt="Helping hands">
-                <div class="text-overlay">Support Education for Underprivileged</div>
-            </div>
-            <div class="slide fade">
-                <img src="content/slideimg3.jpg" alt="Education for all">
-                <div class="text-overlay">Your Contribution Matters</div>
-            </div>
-        </div>
-    </section>
     <section id="about" class="about-section">
         <h2>Why Donate?</h2>
         <p>Your contribution helps provide food, education, and healthcare to underprivileged children.</p>
     </section>
-    
+
     <section id="impact" class="impact-section">
         <h2>Our Impact</h2>
         <div class="stats">
@@ -46,7 +37,7 @@
             <div class="stat"><span>100+</span> Medical Camps Organized</div>
         </div>
     </section>
-    
+
     <section id="donate" class="donate-section">
         <h2>Make a Donation</h2>
         <form id="donation-form">
@@ -55,10 +46,11 @@
             <button type="button" onclick="payWithRazorpay()">Donate Now</button>
         </form>
     </section>
-    
-    
+
     <footer>
         <p>© 2025 Child Help Foundation | All rights reserved</p>
     </footer>
+
+    <script src="typewriter.js"></script> <!-- New script for typewriter effect -->
 </body>
 </html>

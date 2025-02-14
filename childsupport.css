@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -6,114 +5,75 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .navbar {
-    contain: content;
     display: flex;
-    height: 40px; /* Adjusted height for better visibility */
-    justify-content: flex-end; /* Align elements to the right */
-    background-color: black; /* Dark background color */
-    padding: 20px 0px; /* Add some padding */
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Ensure it stays at the top */
-    left: 0; /* Stretch to the full width of the page */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it appears above other elements */
-    
+    height: 40px;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-
-
 .nav-button {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
-    padding: 10px 10px; /* Padding around the text */
-    margin: 5 10px; /* Space between buttons */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid transparent; /* Border for hover effect */
-    border-radius: 0px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth hover transition */
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-    border-color: red; /* Add border on hover */
+    border-color: red;
 }
-.logo {
-    align-self: flex-start;
-    height: 60px;
-    width: 60px;
-}
+
 .active {
-    background-color: red; /* Highlighted background */
-    color: white; /* White text */
-    border-color: rgb(105, 13, 13); /* Border matching active background */
-}
-.slideshow-container {
-    position: relative;
-    max-width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-    position: relative;
-}
-
-.slide img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    background-color: red;
     color: white;
-    font-size: 24px;
-    border-radius: 5px;
+    border-color: rgb(105, 13, 13);
 }
-.about-section, .impact-section, .donate-section, .testimonials, .faq {
+
+/* Typewriter Animation */
+.typewriter-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.typewriter-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    display: inline-block;
+    animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+/* Keyframes for typewriter effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.about-section, .impact-section, .donate-section {
     padding: 50px;
     text-align: center;
-}
-.impact-section .stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.stat {
-    background: #ed1849;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 24px;
-    color: white;
-}
-.donate-section form {
-    background: #222;
-    padding: 30px;
-    border-radius: 10px;
-    display: inline-block;
-}
-.donate-section input, .donate-section select {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 15px;
-}
-.donate-section button {
-    background: #ffe800;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-   
 }

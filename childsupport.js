@@ -1,15 +1,19 @@
-      let slideIndex = 0;
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000);
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector(".typewriter-text");
+    const text = "Every Child Deserves a Future";
+
+    let index = 0;
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
         }
-        document.addEventListener("DOMContentLoaded", showSlides);
+    }
+
+    typeWriter();
+});
+
 
         function payWithRazorpay() {
             let amount = document.getElementById("amount").value * 100;
