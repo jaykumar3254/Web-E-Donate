@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Help Donation</title>
+    <link rel="stylesheet" href="childsupport.css"/>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="childsupport.js" defer></script> <!-- Use defer to load after DOM -->
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
+        <a href="#about" class="nav-button">CNCP</a>
+        <a href="#services" class="nav-button">WHAT WE DO</a>
+        <a href="#portfolio" class="nav-button">VOLUNTEER</a>
+        <a href="#contact" class="nav-button active">DONATE</a>
+    </nav>
+    
+    <section>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="content/slideimg1 (1).jpg" alt="Child in need">
+                <div class="text-overlay">Help Provide Food & Shelter</div>
+            </div>
+            <div class="slide fade">
+                <img src="content/slideimg2.jpg" alt="Helping hands">
+                <div class="text-overlay">Support Education for Underprivileged</div>
+            </div>
+            <div class="slide fade">
+                <img src="content/slideimg3.jpg" alt="Education for all">
+                <div class="text-overlay">Your Contribution Matters</div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>Why Donate?</h2>
+        <p>Your contribution helps provide food, education, and healthcare to underprivileged children.</p>
+    </section>
+    
+    <section id="impact" class="impact-section">
+        <h2>Our Impact</h2>
+        <div class="stats">
+            <div class="stat"><span>10K+</span> Children Helped</div>
+            <div class="stat"><span>5K+</span> Scholarships Provided</div>
+            <div class="stat"><span>100+</span> Medical Camps Organized</div>
+        </div>
+    </section>
+    
+    <section id="donate" class="donate-section">
+        <h2>Make a Donation</h2>
+        <form id="donation-form">
+            <label for="amount">Donation Amount (INR):</label>
+            <input type="number" id="amount" required>
+            <button type="button" onclick="payWithRazorpay()">Donate Now</button>
+        </form>
+    </section>
+    
+    
+    <footer>
+        <p>© 2025 Child Help Foundation | All rights reserved</p>
+    </footer>
+</body>
+</html>
