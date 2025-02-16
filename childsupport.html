@@ -24,17 +24,67 @@
     <div class="typewriter-container">
         <h1 class="typewriter-text"></h1>
     </div>
-
+   
     <img src="content/study_web.jpg" height="40%" width="100%"/>
     
-    <section id="about" class="about-section">
-        <h2>Why Donate?</h2>
+    <section class="header">
+        <h1>SEWA-SETU</h1>
+    </section>
+    <section class="about-section">   
         <p>Your contribution helps provide food, education, and healthcare to underprivileged children.</p>
+    </section>
+    <section id="interactive-images" class="interactive-section">
+        <h2>Explore Our Work</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="content/help.jpg" alt="Education Support">
+                <div class="info">Providing quality education to underprivileged children.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/dadiji1.webp" alt="Healthcare">
+                <div class="info">Organizing free medical camps and healthcare support.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/gift.jpg" alt="Food Support">
+                <div class="info">Delivering meals to children in need.</div>
+            </div>
+        </div>
     </section>
 
     <section id="impact" class="impact-section">
         <h2>Our Impact</h2>
-        <div class="stats">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive India Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="map-container">
+    <!-- India Map -->
+    <img src="content/india-map.webp" alt="India Map" class="india-map">
+
+    <!-- Red Dots -->
+    <div class="location-dot" style="top: 35%; left: 20%;" data-info="Delhi - Capital of India"></div>
+    <div class="location-dot" style="top: 60%; left: 12.5%;" data-info="Mumbai - Financial Hub"></div>
+    <div class="location-dot" style="top: 70%; left: 20%;" data-info="Bangalore - IT Hub"></div>
+    <div class="location-dot" style="top: 49%; left: 9%;" data-info="Jaipur - Pink City"></div>
+
+    <!-- Info Box -->
+<!-- Info Box for Location Details -->
+<div class="info-box" id="infoBox">
+    <h3 id="location-name">Hover over a location</h3>
+    <p id="location-info"></p>
+    <img id="location-image" src="" alt="Location Image" style="display:none; width: 200px; border-radius: 8px;">
+</div>
+
+    
+
+
+ <div class="stats">
             <div class="stat"><span>10K+</span> Children Helped</div>
             <div class="stat"><span>5K+</span> Scholarships Provided</div>
             <div class="stat"><span>100+</span> Medical Camps Organized</div>
