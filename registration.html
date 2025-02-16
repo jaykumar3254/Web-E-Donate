@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Fade Transition</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Foreground image (Mouse reveals background) -->
+        <img src="content/happboys.jpg" class="image top-image" alt="Top Image">
+        
+        <!-- Masked Background Image -->
+        <div class="mask">
+            <img src="content/help.jpg" class="image background-image" alt="Background Image">
+        </div>
+
+        <!-- Image 3: Appears under the circular fade effect -->
+        <img src="content/happboys.jpg" class="image new-bg" alt="New Background">
+
+        <!-- Circular fade effect -->
+        <div class="circle-fade"></div>
+
+        <!-- Button to trigger effect -->
+        <!--<div class="button-container">
+            <button class="submit-btn" onclick="revealNewBackground(event)">Donate</button>
+        </div>-->
+    </div>
+
+    <!-- Floating Registration Form -->
+    <div class="form-container hidden" id="registrationForm">
+        <div class="form-header">
+            <h2>Register</h2>
+            <button class="close-btn" onclick="closeForm()">×</button>
+        </div>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <input type="text" placeholder="Full Address" required>
+            <button type="submit" class="form-submit" onclick="revealNewBackground(event)">Register</button>
+        </form>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html>
