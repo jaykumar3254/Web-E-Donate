@@ -138,3 +138,61 @@ function validateEmail() {
         errorMessage.textContent = "Please enter a valid email address.";
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const dotContainer = document.getElementById("floating-dots");
+    const dotCount = 30; // Number of dots
+    let dots = [];
+
+    // Create dots randomly around the map
+    for (let i = 0; i < dotCount; i++) {
+        let dot = document.createElement("div");
+        dot.classList.add("floating-dot");
+        dot.style.top = `${Math.random() * 100}%`;
+        dot.style.left = `${Math.random() * 100}%`;
+        dotContainer.appendChild(dot);
+        dots.push(dot);
+    }
+
+    // Move dots slightly in cursor direction
+    document.addEventListener("mousemove", (event) => {
+        const { clientX, clientY } = event;
+
+        dots.forEach(dot => {
+            let xMove = (Math.random() * 2 - 1) * 5; // Random small movement
+            let yMove = (Math.random() * 2 - 1) * 5;
+
+            dot.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollText = document.querySelector(".scroll-text");
+    const impactSection = document.querySelector(".impact-section");
+    const newsletter = document.querySelector(".newsletter");
+
+    function handleScroll() {
+        let impactPosition = impactSection.getBoundingClientRect().top;
+        let newsletterPosition = newsletter.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+
+        console.log("Impact Position:", impactPosition);
+
+        // Trigger text earlier
+        if (impactPosition < windowHeight * 0.9) {
+            scrollText.style.opacity = "1"; 
+            scrollText.style.transform = "translateX(0)";
+        } else {
+            scrollText.style.opacity = "0";
+            scrollText.style.transform = "translateX(-100%)";
+        }
+
+        // Fade out before newsletter
+        if (newsletterPosition < windowHeight * 0.6) {
+            scrollText.style.opacity = "0";
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+});
+

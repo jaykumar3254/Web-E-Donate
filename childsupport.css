@@ -152,31 +152,42 @@ body {
     opacity: 1;
 }
 .map-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 80%;
-    margin: auto;
-}
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        z-index: 1; /* Above background but below text */
+    }
+    
+
+   
+
 
 .india-map {
-    width: 60%;
-    padding-right: 400px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding-right: 0;
 }
 
 .location-dot {
+
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: red;
     border-radius: 50%;
     cursor: pointer;
+    transform: translate(-50%, -50%); /* Centers dot on coordinates */
     transition: transform 0.3s ease-in-out;
 }
 
 .location-dot:hover {
     transform: scale(1.5);
+    z-index: 999;
 }
 
 .info-box {
@@ -223,8 +234,12 @@ body {
 }
 
 .newsletter-section {
+    position: relative; /* Ensure it stays in place */
+    z-index: 1;
     text-align: center;
-    padding: 50px;
+    padding: 50px 0;
+    background: black;
+    margin-top: 50px; 
 }
 .newsletter-section h2 {
     font-size: 24px;
@@ -250,12 +265,75 @@ body {
     font-size: 14px;
     margin-top: 10px;
 }
+/* White tiny dots */
+.floating-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+/* Make sure text is not limited by the map container */
+.scroll-text {
+    position: fixed; /* Keep text floating over the screen */
+    top: 50%;
+    left: -5%;
+    width: 100vw; /* Full screen width */
+    display: flex;
+    justify-content: space-between;
+    font-size: 100px; /* Large text */
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.08); /* Initially faded */
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    z-index: -2; /* Keep behind the map but above background */
+    padding: 0 5%;
+    pointer-events: none; /* Prevent interference */
+}
+
+/* Left side text */
+.left-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Right side text */
+.right-text {
+    flex: 1;
+    text-align: right;
+}
+
+/* When text is fully visible */
+.scroll-text.visible {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+/* When text fades out */
+.scroll-text.hidden {
+    opacity: 0;
+    transform: scale(1);
+}
+
+/* Ensure the map container is centered */
+
+
+
 
 .footer{
-    background:#000;
-    padding:-100px 100px;
-    font-family: 'Play', sans-serif;
-    text-align:center;
+    
+    position: relative;
+    text-align: center;
+    background: black;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
     }
     
     .footer .row{
@@ -263,7 +341,9 @@ body {
     margin:1% 0%;
     padding:0.6% 0%;
     color:gray;
-    font-size:0.8em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     }
     
     .footer .row a{

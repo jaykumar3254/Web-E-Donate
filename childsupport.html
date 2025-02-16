@@ -59,28 +59,27 @@
             </div>
         </div>
     </section>
+    <h1 class="scroll-text">
+        <span class="left-text">DOTS</span>
+        <span class="right-text">OF HOPE</span>
+    </h1>
 
-    <section id="impact" class="impact-section">
+    <div class="impact-section">
         <h2>Our Impact</h2>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive India Map</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    </div>    
+<!-- Move the text outside of map-container -->
 
 <div class="map-container">
     <!-- India Map -->
-    <img src="content/india-map.webp" alt="India Map" class="india-map">
 
+    <img src="content/india-map.webp" alt="India Map" class="india-map">
+    <div id="floating-dots"></div>
     <!-- Red Dots -->
     <div class="location-dot" style="top: 35%; left: 20%;" data-info="Delhi - Capital of India"></div>
     <div class="location-dot" style="top: 60%; left: 12.5%;" data-info="Mumbai - Financial Hub"></div>
     <div class="location-dot" style="top: 70%; left: 20%;" data-info="Bangalore - IT Hub"></div>
     <div class="location-dot" style="top: 49%; left: 9%;" data-info="Jaipur - Pink City"></div>
+</div>    
 
  <!-- Info Box -->
 <!-- Info Box for Location Details -->
@@ -89,13 +88,8 @@
     <p id="location-info"></p>
     <img id="location-image" src="" alt="Location Image" style="display:none; width: 200px; border-radius: 8px;">
 </div>
-<section>
-<div class="stats">
-    <div class="stat"><span>10K+</span> Children Helped</div>
-    <div class="stat"><span>5K+</span> Scholarships Provided</div>
-    <div class="stat"><span>100+</span> Medical Camps Organized</div>
-</div>
-</section>
+
+
 
     <section id="newsletter" class="newsletter-section">
         <h2>Subscribe to Our Newsletter</h2>
@@ -104,6 +98,7 @@
         <div id="error-message" class="error-message"></div>
     </section>
 
+</body>
       <footer>
         <div class="footer">
         <div class="row">
@@ -129,5 +124,5 @@
             </footer>	
 
     
-</body>
+
 </html>
