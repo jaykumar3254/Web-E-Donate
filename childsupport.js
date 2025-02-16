@@ -92,21 +92,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".typewriter-text");
+    const missionSection = document.getElementById("mission");
 
+    function checkScroll() {
+        const sectionPosition = missionSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
 
-        function payWithRazorpay() {
-            let amount = document.getElementById("amount").value * 100;
-            let options = {
-                key: "YOUR_RAZORPAY_KEY",
-                amount: amount,
-                currency: "INR",
-                name: "Child Help Foundation",
-                description: "Donation",
-                image: "logo.png",
-                handler: function (response) {
-                    alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
-                }
-            };
-            let rzp = new Razorpay(options);
-            rzp.open();
+        if (sectionPosition < screenPosition) {
+            missionSection.classList.add("visible");
+            typeWriter("Our aim is to fill dots of hope");
+            window.removeEventListener("scroll", checkScroll); // Ensure animation runs only once
         }
+    }
+
+    function typeWriter(text) {
+        let charIndex = 0;
+        textElement.style.width = "100%"; // Enable full-width effect
+        textElement.innerHTML = ""; // Clear text
+
+        function type1() {
+            if (charIndex < text.length) {
+                textElement.innerHTML += text.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            }
+        }
+        type1();
+    }
+
+    window.addEventListener("scroll", checkScroll);
+});
+
+
+function validateEmail() {
+    const email = document.getElementById("email").value;
+    const errorMessage = document.getElementById("error-message");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (emailPattern.test(email)) {
+        alert("Subscription successful!");
+        errorMessage.textContent = "";
+    } else {
+        errorMessage.textContent = "Please enter a valid email address.";
+    }
+}

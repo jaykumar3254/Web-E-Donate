@@ -30,9 +30,18 @@
     <section class="header">
         <h1>SEWA-SETU</h1>
     </section>
-    <section class="about-section">   
-        <p>Your contribution helps provide food, education, and healthcare to underprivileged children.</p>
-    </section>
+    
+        <section class="org-info">
+            <h2>Connecting NGOs with People in Need</h2>
+            <p>
+                SEWA-SETU bridges the gap between <span class="highlight">NGOs</span> and individuals seeking assistance. 
+                We offer multiple <span class="highlight">online payment facilities</span> that support not only 
+                <span class="highlight">children</span>, but also the <span class="highlight">elderly</span>, 
+                <span class="highlight">blood donation drives</span>, 
+                <span class="highlight">meal distributions</span>, <span class="highlight">toy donations</span>, and more.
+            </p>
+        </section>
+        
     <section id="interactive-images" class="interactive-section">
         <h2>Explore Our Work</h2>
         <div class="image-grid">
@@ -73,37 +82,52 @@
     <div class="location-dot" style="top: 70%; left: 20%;" data-info="Bangalore - IT Hub"></div>
     <div class="location-dot" style="top: 49%; left: 9%;" data-info="Jaipur - Pink City"></div>
 
-    <!-- Info Box -->
+ <!-- Info Box -->
 <!-- Info Box for Location Details -->
 <div class="info-box" id="infoBox">
     <h3 id="location-name">Hover over a location</h3>
     <p id="location-info"></p>
     <img id="location-image" src="" alt="Location Image" style="display:none; width: 200px; border-radius: 8px;">
 </div>
+<section>
+<div class="stats">
+    <div class="stat"><span>10K+</span> Children Helped</div>
+    <div class="stat"><span>5K+</span> Scholarships Provided</div>
+    <div class="stat"><span>100+</span> Medical Camps Organized</div>
+</div>
+</section>
+
+    <section id="newsletter" class="newsletter-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="validateEmail()">Subscribe</button>
+        <div id="error-message" class="error-message"></div>
+    </section>
+
+      <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+            </div>
+            
+            <div class="row">
+            SEWASETU Copyright © 2025 - All rights reserved 
+            </div>
+            </div>
+            </footer>	
 
     
-
-
- <div class="stats">
-            <div class="stat"><span>10K+</span> Children Helped</div>
-            <div class="stat"><span>5K+</span> Scholarships Provided</div>
-            <div class="stat"><span>100+</span> Medical Camps Organized</div>
-        </div>
-    </section>
-
-    <section id="donate" class="donate-section">
-        <h2>Make a Donation</h2>
-        <form id="donation-form">
-            <label for="amount">Donation Amount (INR):</label>
-            <input type="number" id="amount" required>
-            <button type="button" onclick="payWithRazorpay()">Donate Now</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 Child Help Foundation | All rights reserved</p>
-    </footer>
-
-    <script src="typewriter.js"></script> <!-- New script for typewriter effect -->
 </body>
 </html>
