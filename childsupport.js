@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.querySelector(".typewriter-text");
-    const text = "Every Child Deserves a Future";
+    const text = "EDUCATION";
 
     let index = 0;
     function typeWriter() {
