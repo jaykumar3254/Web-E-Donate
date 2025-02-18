@@ -1,0 +1,292 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: rgb(50, 46, 46);
+  }
+
+    .page-layout {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: space-between; 
+        margin: 40px;
+        gap: 40px; 
+        width: 100%;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(2, auto);
+        gap: 24px;
+        margin-left: 200px;
+      }
+
+      .product-card {
+        border-radius: 8px;
+        padding: 16px;
+        background: black;
+        box-shadow: 2px 2px 8px #dd3535; /* Changed to left and bottom shadow */
+        width: 280px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: white;
+      background: inherit;  /* Inherit black background from card */
+  }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      background: inherit;  /* Inherit black background from card */
+  }
+
+    .price {
+      font-size: 16px;
+      color: white;
+      background: inherit;  /* Inherit black background from card */
+  }
+
+    .description {
+      color: white;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .description-icon {
+      width: 16px;
+      height: 16px;
+      border: 1px solid white;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      cursor: help;
+    }
+
+    .add-btn {
+      background: #E31837;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      display: block;
+      margin-top: 10px;
+  }
+  
+  .add-btn:hover {
+      background: #C6011F;
+  }
+  
+
+   /* donation panel */
+   .donation-panel {
+    width: 300px;
+    background: black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px #dd3535; /* Changed to match product cards */
+    overflow: hidden;
+    margin-left: auto; 
+    margin-top: -650px;
+    margin-right: 200px;
+}
+
+    .amount-header {
+      background: #E31837;
+      color: white;
+      padding: 12px 16px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .donation-content {
+      padding: 20px;
+    }
+
+    .section-title {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .payment-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .payment-icon {
+      width: 40px;
+      height: 40px;
+      background: #f5f5f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .payment-label {
+      font-size: 12px;
+      color: white;
+      text-align: center;
+    }
+
+    .donate-button {
+      background: #E31837;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .donate-button:hover {
+      background: #C6011F;
+    }
+
+/* quantity button */ 
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+  
+  .quantity-btn {
+      background: #E31837;
+      color: white;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+  }
+  
+  .quantity-btn:hover {
+      background: #C6011F;
+  }
+  
+  .quantity-value {
+    min-width: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background: inherit;  /* Inherit black background from card */
+}
+  
+  .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+  }
+
+
+  /*carousel*/
+
+/* Updated carousel styles */
+.carousel-container {
+  width: 100%; /* Changed from 600px to 100% */
+  height: 500px; /* Increased height for better proportion */
+  position: relative;
+  margin: 0;  /* Removed auto margin */
+  overflow: hidden;
+  margin-bottom: 40px; /* Added margin bottom for spacing */
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  background-size: cover; /* Added for better image handling */
+  background-position: center; /* Added for better image handling */
+}
+
+/* Optional: Updated background colors for better visibility */
+.slide:nth-child(1) {
+  background: linear-gradient(45deg, #2196F3, #1976D2);
+}
+
+.slide:nth-child(2) {
+  background: linear-gradient(45deg, #4CAF50, #388E3C);
+}
+
+.slide:nth-child(3) {
+  background: linear-gradient(45deg, #FF5722, #E64A19);
+}
+
+.slide:nth-child(4) {
+  background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2; /* Added to ensure indicators are always visible */
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease; /* Added smooth transition */
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.2); /* Added slight scale effect for active indicator */
+}
