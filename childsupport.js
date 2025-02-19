@@ -57,7 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
             images: ["content/help.jpg"]
         }
     };
-
+    document.querySelectorAll('.red-dot').forEach(dot => {
+        dot.addEventListener('mouseenter', function() {
+            let infoBox = this.querySelector('.infobox');
+            infoBox.style.display = 'block';
+        });
+    
+        dot.addEventListener('mouseleave', function() {
+            let infoBox = this.querySelector('.infobox');
+            infoBox.style.display = 'none';
+        });
+    });
+    
     document.querySelectorAll(".location-dot").forEach(dot => {
         dot.addEventListener("mouseover", function() {
             const location = this.getAttribute("data-info").split(" - ")[0]; // Extract city name
