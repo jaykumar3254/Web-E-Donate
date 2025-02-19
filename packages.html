@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation UI</title>
+    <link rel="stylesheet" href="packages.css">
+    <script src="packages.js"></script>
+</head>
+<body>
+
+  
+  <div class="carousel-container">
+    <div class="carousel">
+        <div class="slide">Slide 1</div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div>
+        <div class="slide">Slide 4</div>
+    </div>
+    <div class="indicators"></div>
+</div>
+
+
+
+    <div class="container">
+      <div class="product-card" data-product="foodPackets">
+        <h2 class="product-title">Food Packets (20 Kids)</h2>
+        <img src="images/cake1.jpg" alt="Food Packets" class="product-image">
+        <div class="product-info">
+            <div>
+                <div class="price">Rs. 35/Unit</div>
+            </div>
+            <div class="quantity-controls">
+                <button onclick="handleQuantityChange('foodPackets', false)" class="quantity-btn">-</button>
+                <span class="quantity-value">1</span>
+                <button onclick="handleQuantityChange('foodPackets', true)" class="quantity-btn">+</button>
+            </div>
+            <button class="add-btn">Add+</button>
+        </div>
+    </div>
+  
+      <div class="product-card" data-product="birthdayCake">
+        <h2 class="product-title">Birthday Cake</h2>
+        <img src="images/cake2.jpg" alt="Food Packets" class="product-image">
+        <div class="product-info">
+            <div>
+                <div class="price">Rs. 300/Unit</div>
+            </div>
+            <div class="quantity-controls">
+                <button onclick="handleQuantityChange('birthdayCake', false)" class="quantity-btn">-</button>
+                <span class="quantity-value">1</span>
+                <button onclick="handleQuantityChange('birthdayCake', true)" class="quantity-btn">+</button>
+            </div>
+            <button class="add-btn">Add+</button>
+        </div>
+    </div>
+  
+    <div class="product-card" data-product="birthdayParty">
+      <h2 class="product-title">Birthday Party</h2>
+      <img src="images/cake3.jpg" alt="Food Packets" class="product-image">
+      <div class="product-info">
+          <div>
+              <div class="price">Rs. 700/Unit</div>
+          </div>
+          <div class="quantity-controls">
+              <button onclick="handleQuantityChange('birthdayParty', false)" class="quantity-btn">-</button>
+              <span class="quantity-value">1</span>
+              <button onclick="handleQuantityChange('birthdayParty', true)" class="quantity-btn">+</button>
+          </div>
+          <button class="add-btn">Add+</button>
+      </div>
+  </div>
+  
+  <div class="product-card" data-product="cakeAndFood">
+    <h2 class="product-title">Cake and Food</h2>
+    <img src="images/cake4.jpg" alt="Food Packets" class="product-image">
+    <div class="product-info">
+        <div>
+            <div class="price">Rs. 1000/Unit</div>
+        </div>
+        <div class="quantity-controls">
+            <button onclick="handleQuantityChange('cakeAndFood', false)" class="quantity-btn">-</button>
+            <span class="quantity-value">1</span>
+            <button onclick="handleQuantityChange('cakeAndFood', true)" class="quantity-btn">+</button>
+        </div>
+        <button class="add-btn">Add+</button>
+    </div>
+</div>
+    </div>
+
+    <div class="donation-panel">
+        <div class="amount-header">
+          <span>Amount</span>
+          <span>₹ 0</span>
+        </div>
+        <div class="donation-content">
+          <div class="section-title">DONATE VIA:</div>
+          <div class="payment-options">
+            <div class="payment-option">
+              <img class="payment-icon" src="images/phonepe.png">
+              <div class="payment-label">PhonePe</div>
+            </div>
+            <div class="payment-option">
+              <img class="payment-icon" src="images/gpay.png">
+              <div class="payment-label">Google Pay</div>
+            </div>
+            <div class="payment-option">
+              <img class="payment-icon" src="images/bhim.png">
+              <div class="payment-label">Bhim UPI</div>
+            </div>
+            <div class="payment-option">
+              <div class="payment-icon">...</div>
+              <div class="payment-label">Others</div>
+            </div>
+          </div>
+  
+          <div class="section-title">OTHER OPTIONS</div>
+          <div class="payment-options">
+            <div class="payment-option">
+              <img class="payment-icon" src="images/paytm.png">
+              <div class="payment-label">Paytm</div>
+            </div>
+            <div class="payment-option">
+              <img class="payment-icon" src="images/card.png">
+              <div class="payment-label">Cr/Dr Cards</div>
+            </div>
+            <div class="payment-option">
+              <img class="payment-icon" src="images/netbank.png">
+              <div class="payment-label">Net Banking</div>
+            </div>
+            <div class="payment-option">
+              <div class="payment-icon">🎁</div>
+              <div class="payment-label">Gift Cards</div>
+            </div>
+          </div>
+  
+          <button class="donate-button">Donate Now</button>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

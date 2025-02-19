@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth and Toy Donation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Make a Difference Today</h1>
+        <p>Your donations bring joy to children and support to elders in need</p>
+      </div>
+      
+      <div class="container">
+        <div class="donation-types">
+          <div class="donation-card">
+            <h3>Clothes</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="clothes">
+          </div>
+          <div class="donation-card">
+            <h3>Toys</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="toys">
+          </div>
+          <div class="donation-card">
+            <h3>Books</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="books">
+          </div>
+        </div>
+        
+        <div class="donation-total">Total Items: <span id="total-count">0</span></div>
+        
+        <div class="donation-form">
+          <h2>Your Information</h2>
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your full name" id="name">
+            <div class="error-message" id="name-error">Please enter your name</div>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Your email address" id="email">
+            <div class="error-message" id="email-error">Please enter a valid email</div>
+          </div>
+          <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" placeholder="Your DOB" id="DOB">
+            <div class="error-message" id="date-error">Please enter a valid DOB</div>
+          </div>
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="Your phone number" id="phone">
+            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+          </div>
+          <div class="input-group">
+            <label>Address</label>
+            <input type="text" placeholder="Your full address" id="address">
+            <div class="error-message" id="address-error">Please enter your address</div>
+          </div>
+          <button class="submit-btn" onclick="submitForm()">Submit Donation</button>
+        </div>
+      </div>
+      
+      <div class="success-message" id="success-message">
+        Thank you for your donation!
+      </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
