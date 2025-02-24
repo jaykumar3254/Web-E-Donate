@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "css-ui-lib": "^1.0.0"
+    "css-ui-lib": "^1.0.0",
+    "pg": "^8.13.3"
   }
 }
