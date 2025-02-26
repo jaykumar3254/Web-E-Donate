@@ -1,38 +1,37 @@
 body {
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+}
+.section {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
-}
-.form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background:transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    text-align: center;
-    z-index: 10;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-.image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1.5s ease-in-out;
+/* First Section with Candle Light Effect */
+.section.candle-section {
+    background: url(content/covid1.jpg) no-repeat center center fixed; /* Replace with your image URL */
+    background-size: cover;
 }
 
 .candle {
-    position: relative;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 120px;
     background-color: #f0f0f0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    z-index: 2; /* Ensure the candle is above the light effect */
 }
 
 .flame {
@@ -48,6 +47,7 @@ body {
     box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.6), /* Outer glow */
                 0 0 40px 20px rgba(255, 255, 0, 0.4); /* Inner glow */
     filter: blur(1px); /* Soften the edges for a more realistic glow */
+    z-index: 3; /* Ensure the flame is above the candle and light effect */
 }
 
 .spark {
@@ -57,6 +57,7 @@ body {
     background-color: yellow;
     border-radius: 50%;
     animation: sparkle 1s infinite ease-out;
+    z-index: 4; /* Ensure sparks are above everything */
 }
 
 @keyframes flicker {
@@ -117,4 +118,36 @@ body {
     top: -30px;
     left: 60%;
     animation-delay: 1s;
+}
+
+/* Light Effect */
+.light-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8) 70%);
+    pointer-events: none; /* Ensure it doesn't block interactions */
+    z-index: 1; /* Ensure the light effect is below the candle and flame */
+}
+
+/* Second Section with Another Image */
+.section.image-section {
+    background: url(content/bacccha.jpg) no-repeat center center fixed; /* Replace with your second image URL */
+    background-size: cover;
+}
+
+.candle-text {
+    position: absolute;
+    bottom: 0%; /* Position text below the candle */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 0, 0);
+    font-size: 58px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    text-align: center;
+    text-shadow: 5px;
+    z-index: 5; /* Ensure text is above everything */
 }
