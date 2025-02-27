@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Cloths Change Lives!!!</title>
+    <link rel="stylesheet" href="clothsdonation.css">
+</head>
+<body>
+  <div class="slideshow-container">
+    <div class="slide">
+        <img src="Images/cinematic-rendering-showing-great-migration.jpg" alt="Slide 1">
+        <div class="text-content">
+          <h2>Donate Clothes, Change Lives</h2>
+          <p>A child’s laughter, a warm hug, a heart full of hope—your donations can make this happen. Give your pre-loved clothes, toys, and books a new purpose!</p>
+        </div>        
+    </div>
+    <div class="slide">
+        <img src="Images/photorealistic-kid-refugee-camp (1).jpg" alt="Slide 2">
+        <div class="text-content">
+          <h2>Give Warmth in Winter</h2>
+          <p>Your old clothes can bring warmth, your unused toys can bring joy, and your books can spark dreams. A small act of kindness can change a life—donate today!</p>  
+        </div>  
+    </div>
+    <div class="slide">
+        <img src="Images/photorealistic-kid-refugee-camp.jpg" alt="Slide 3">
+        <div class="text-content">
+          <h2>Make an Impact Today</h2>
+          <p>The things you no longer need could mean the world to someone else. Share your kindness—donate clothes, toys, and books, and bring smiles to those in need!</p>
+        </div>
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+
+<div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    <div class="hero">
+        <h1>Make a Difference Today</h1>
+        <p>Your donations bring joy to children and support to elders in need</p>
+      </div>
+      
+      <div class="container">
+        <div class="donation-types">
+          <div class="donation-card">
+            <h3>Clothes</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="clothes">
+          </div>
+          <div class="donation-card">
+            <h3>Toys</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="toys">
+          </div>
+          <div class="donation-card">
+            <h3>Books</h3>
+            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="books">
+          </div>
+        </div>
+        
+        <div class="donation-total">Total Items: <span id="total-count">0</span></div>
+
+        <div>
+          <p>"Share the Warmth, Spark a Smile!"
+
+            Imagine a child’s joy when they hug a toy for the first time. Think of the warmth a cozy sweater brings to someone in need. Picture the excitement in a child’s eyes when they open a book filled with endless stories and possibilities.
+            
+            Your small act of kindness can change a life. The clothes you no longer wear, the toys your child has outgrown, and the books gathering dust on your shelf—these can bring comfort, happiness, and hope to someone less fortunate.
+            
+            Let’s come together and make a difference. Donate today and be the reason someone smiles! ❤️
+            
+            </p>
+        </div>
+        
+        <div class="donation-form">
+          <h2>Your Information</h2>
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your full name" id="name">
+            <div class="error-message" id="name-error">Please enter your name</div>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Your email address" id="email">
+            <div class="error-message" id="email-error">Please enter a valid email</div>
+          </div>
+          <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" placeholder="Your DOB" id="DOB">
+            <div class="error-message" id="date-error">Please enter a valid DOB</div>
+          </div>
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="Your phone number" id="phone">
+            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+          </div>
+          <div class="input-group">
+            <label>Address</label>
+            <input type="text" placeholder="Your full address" id="address">
+            <div class="error-message" id="address-error">Please enter your address</div>
+          </div>
+          <button class="submit-btn" onclick="submitForm()">Submit Donation</button>
+          <div class="hash-tags">
+            <h3>#GiveWithLove #SpreadHappiness #DonationDrive</h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="success-message" id="success-message">
+        Thank you for your donation!
+      </div>
+
+    <script src="clothsdonation.js">
+    </script>
+</body>
+</html>

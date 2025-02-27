@@ -75,6 +75,7 @@ body {
     border: 2px solid #333;
     transition: all 0.3s ease;
     color: #f4f2f2;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   
   .donation-card:hover {
@@ -103,5 +104,187 @@ body {
     margin-top: 60px;
     padding: 40px 0;
     background: #1a1a1a;
-    border-top: 3px solid #ff3333;
+    border-top: 3px solid #ff0000;
+    height: 20px;
   }
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Dots/bullets/indicators */
+.dots-container {
+    text-align: center;
+    padding: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    size: 20px;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Slide structure */
+.slide {
+  display: flex;
+  align-items: flex-start; /* Changed from center to flex-start to align at top */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Image */
+.slide img {
+  width: 45%;  /* Adjust image size */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Text beside the image */
+.text-content {
+  width: 50%;
+  padding-left: 15px;
+  text-align: right;
+  color: rgb(160, 24, 24);
+  font-family: Arial, sans-serif;
+  align-self: flex-start; /* Added to ensure text aligns at the top */
+  margin-top: 7%; /* Ensure there's no top margin */
+  text-align: center;
+  margin-right: 3%;
+}
+
+.text-content h2 {
+  font-size: 1.8em;
+  margin-top: 0; /* Remove top margin to stick to the top */
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1.1em;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column; /* Stack image & text on smaller screens */
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+  }
+  
+  .text-content {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+
+.hash-tags{
+  text-align: center;
+  color: #ff0000;
+  
+}
