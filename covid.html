@@ -3,36 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candle Light Effect with Scrollable Page</title>
+    <title>Enhanced Animated Candle</title>
     <link rel="stylesheet" href="covid.css">
 </head>
 <body>
-    <!-- First Section with Candle Light Effect -->
-    <div class="section candle-section">
-        <div class="candle">
-            <div class="flame"></div>
-            <div class="spark spark1"></div>
-            <div class="spark spark2"></div>
-            <div class="spark spark3"></div>
-            <div class="spark spark4"></div>
-            <div class="spark spark5"></div>
-        </div>
-        <div class="light-effect"></div>
-        <div class="candle-text">
-            <p>COVID-19 PANDEMIC</p>
-        </div>
+    <nav class="navbar">
+        <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
+        <a href="#about" class="nav-button">CNCP</a>
+        <a href="#services" class="nav-button">WHAT WE DO</a>
+        <a href="#portfolio" class="nav-button">VOLUNTEER</a>
+        <a href="#contact" class="nav-button active">DONATE</a>
+    </nav>
+    <div class="form-container hidden">
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="spark spark1"></div>
+        <div class="spark spark2"></div>
+        <div class="spark spark3"></div>
+        <div class="spark spark4"></div>
+        <div class="spark spark5"></div>
+      </div>
     </div>
-
-    <!-- Second Section with Another Image -->
-    <div class="section image-section">
-        <!-- Add your content for the second section here -->
-         <img src="content/cardbg.jpg">
-        <h1 style="color: white; text-align: center;">This is the Second Section</h1>
+    <!-- Glowing Text Below the Candle -->
+    <div class="candle-text">
+        <p>This is a glowing candle.</p>
+        <p>Enjoy the warm light!</p>
     </div>
-    <div class="section image-section">
-        <!-- Add your content for the second section here -->
-         <img src="content/cardbg.jpg">
-        <h1 style="color: white; text-align: center;">This is the Second Section</h1>
+    <div>
+      <img style="position: relative; width: 100%; margin-top: 0px; padding: 0px;" src="content/covid1.jpg" alt="">
+      <div class="ov1">
+        <h2>COVID PENDEMIC</h2>
+      </div>
+      <div class="ov2">
+        <h5>"Prepare for the Future: Help Us Build a Safer Tomorrow!"</h5>
+      </div>
     </div>
+    <div >
+      <img style="position: relative; width: 100%; margin-top: 0px; padding: 0px;" src="content/covid2.webp" alt="">
+      <div class="ov3">
+        <h4>"Your donation can save lives. Together,<br> we can be ready for the next pandemic."</h4>
+      </div>
+      <div class="op1">
+        <p>
+          The COVID-19 pandemic was one of the greatest crises of our time, exposing the fragility of our healthcare systems and the unpreparedness of the world in the face of a global disaster. Hospitals were overwhelmed, with patients lying in hallways, waiting for a bed that might never become available. Oxygen shortages left countless people gasping for breath as desperate families searched for help. Doctors and nurses, the brave frontline warriors, worked around the clock, often without proper protective equipment, falling sick themselves while trying to save others. Morgues overflowed, and funeral homes struggled to keep up, as families were forced to say their final goodbyes over video calls. Cities once full of life turned into ghost towns under strict lockdowns, businesses collapsed, and millions lost their livelihoods overnight. Schools shut down, forcing children into a future of uncertainty. Panic spread as grocery store shelves emptied, and misinformation made an already dire situation worse. Amidst all this darkness, there were stories of resilience, of communities coming together, of scientists racing against time to develop vaccines. But the cost was enormous—millions of lives lost, economies shattered, and mental health crises skyrocketing. The question remains: will we be ready when the next pandemic strikes? We cannot afford to wait. Now is the time to act, to prepare, and to ensure that such devastation never happens again. Your support can make a difference.
+        </p>
+      </div>
+    </div>
+    <div class="story">
+      <h2 style="color: red; padding: 10px; background-color: rgba(255, 255, 0, 0.349);">The Pandemic That Changed the World: A Lesson for the Future</h2>
+      <p>
+        The years 2020 to 2023 will forever be remembered as a time of global turmoil, resilience, and transformation. What began as an outbreak in a single city soon turned into a worldwide crisis, bringing nations to a standstill. COVID-19 spread rapidly, forcing people into isolation, businesses to shut down, and hospitals to operate beyond their limits. Streets that once bustled with life became eerily silent as lockdowns became the new reality.
+        
+        Millions fell ill, and countless lives were lost. Healthcare workers became the last line of defense, battling exhaustion, fear, and the overwhelming demand for critical care. Hospitals ran out of beds, oxygen became scarce, and desperate families searched for help wherever they could. The economic impact was just as devastating—jobs vanished overnight, businesses collapsed, and entire industries suffered.
+        
+        But amid the darkness, humanity showed its strength. Scientists worked tirelessly to develop vaccines in record time, frontline workers risked their lives every day, and communities came together to help those in need. People adapted to a new way of living—work from home became the norm, digital learning replaced classrooms, and technology bridged the gaps between families separated by borders.
+        
+        As vaccines rolled out, hope began to return. Restrictions slowly lifted, businesses reopened, and people started rebuilding their lives. But the pandemic left behind deep scars—millions of children lost crucial years of education, mental health issues skyrocketed, and economies struggled to recover. More importantly, it exposed how unprepared the world was for a crisis of this magnitude.
+        
+        The question remains: Are we ready for the next pandemic? If COVID-19 taught us anything, it’s that early preparation can save millions of lives. Investing in healthcare, research, and emergency response is not an option—it’s a necessity. We cannot afford to wait for another crisis to act.
+        
+        This is why your support matters. By donating today, you’re helping build a future where no country has to face a pandemic unprepared. Together, we can ensure that the lessons of 2020–2023 are not forgotten, but used to create a safer world for generations to come.
+        
+        </p>
+    </div>
+    <div class="numbers">
+      <div class="counter1" data-target="400000">0</div>
+      <h2 class="text">Daily Reports</h2>
+      <div class="counter" data-target="533570">0</div>
+      <h2 class="text">Actual Deaths</h2>
+      <div class="counter2" data-target="533570">44milion+</div>
+      <h2 class="text">recoveries</h2>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const counter = document.querySelector(".counter");
+          const target = +counter.getAttribute("data-target");
+          let count = 0;
+          const increment = target / 300; // Adjust speed here
+          
+          function updateCounter() {
+              if (count < target) {
+                  count += increment;
+                  counter.innerText = Math.floor(count);
+                  requestAnimationFrame(updateCounter);
+              } else {
+                  counter.innerText = target.toLocaleString();
+              }
+          }
+          updateCounter();
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+          const counter = document.querySelector(".counter1");
+          const target = +counter.getAttribute("data-target");
+          let count = 0;
+          const increment = target / 300; // Adjust speed here
+          
+          function updateCounter() {
+              if (count < target) {
+                  count += increment;
+                  counter.innerText = Math.floor(count);
+                  requestAnimationFrame(updateCounter);
+              } else {
+                  counter.innerText = target.toLocaleString();
+              }
+          }
+          updateCounter();
+      });
+  </script>
 </body>
 </html>
