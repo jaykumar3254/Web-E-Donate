@@ -5,9 +5,7 @@ body {
     background: #3f3a3a;
     color: #f4f2f2;
   }
-  body::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, Edge */
-}
+  
   .hero {
     background: linear-gradient(rgba(47, 46, 46, 0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
     padding: 60px 20px;
@@ -290,3 +288,92 @@ body {
   color: #ff0000;
   
 }
+.navbar {
+  contain: content;
+  display: flex;
+  height: 40px; /* Adjusted height for better visibility */
+  justify-content: flex-end; /* Align elements to the right */
+  background-color: black; /* Dark background color */
+  padding: 20px 0px; /* Add some padding */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Ensure it stays at the top */
+  left: 0; /* Stretch to the full width of the page */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it appears above other elements */
+  
+}
+
+.nav-button {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+  padding: 10px 10px; /* Padding around the text */
+  margin: 5 10px; /* Space between buttons */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid transparent; /* Border for hover effect */
+  border-radius: 0px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-button:hover {
+  border-color: red; /* Add border on hover */
+}
+
+.logo {
+  align-self: flex-start;
+  height: 60px;
+  width: 60px;
+}
+
+.footer{
+  background:#000;
+  padding:-100px 100px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
