@@ -207,3 +207,23 @@ document.addEventListener("DOMContentLoaded", () => {
     handleScroll();
 });
 
+document.querySelectorAll(".location-dot").forEach(dot => {
+    dot.addEventListener("mouseenter", function () {
+        let infoBox = document.createElement("div");
+        infoBox.className = "infobox";
+        infoBox.innerHTML = `
+            <img src="images/${this.getAttribute("data-image")}" alt="${this.getAttribute("data-info")}">
+            <p>${this.getAttribute("data-info")}</p>
+        `;
+
+        document.body.appendChild(infoBox);
+
+        let rect = this.getBoundingClientRect();
+        infoBox.style.top = `${rect.top - 150}px`; // Adjust position
+        infoBox.style.left = `${rect.left + rect.width / 2}px`;
+
+        this.addEventListener("mouseleave", function () {
+            infoBox.remove();
+        });
+    });
+});

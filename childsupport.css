@@ -191,20 +191,34 @@ body {
 }
 
 .infobox {
-    display: none; /* Initially hidden */
+    display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 30px; /* Adjust to position above the dot */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 14px;
-    z-index: 1000; /* Ensure it's above other elements */
-    white-space: nowrap; /* Prevents text from breaking */
+    text-align: center;
+    width: 200px;
+    z-index: 1000;
 }
 
-.red-dot:hover + .infobox {
-    display: block; /* Show when hovering over dot */
+.infobox img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
+
+.location-dot:hover .infobox {
+    display: block;
+}
+
+
+
 
 .org-info {
     text-align: center;
