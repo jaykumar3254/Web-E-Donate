@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Child Help Donation</title>
+    <title>Food Donation</title>
     <link rel="stylesheet" href="../CSS/food_donation.css">
-    <script src="childsupport.js" defer></script>
+    <!-- <script src="childsupport.js" defer></script> -->
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
-        <a href="#about" class="nav-button">CNCP</a>
-        <a href="#services" class="nav-button">WHAT WE DO</a>
-        <a href="#portfolio" class="nav-button">VOLUNTEER</a>
-        <a href="#contact" class="nav-button active">DONATE</a>
+        <a href="./food_donation_home.html" class="nav-button active">Home</a>
+        <a href="about_us.html" class="nav-button ">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="get-involved.html" class="nav-button ">Get Involved</a>
+        <a href="./user_login_register.html" class="nav-button">Donate</a>
     </nav>
 
     <!-- Hero Section with Text Overlay -->
@@ -24,7 +24,7 @@
         <div class="quote-container">
             <h1 class="quote-text">"Hunger is not an issue of charity. It is an issue of justice."</h1>
             <p class="quote-author">~ Jacques Diouf</p>
-            <button class="donate-button" >Donate Now</button>
+            <button class="donate-button">Donate Now</button>
         </div>
     </div>
 
@@ -46,11 +46,11 @@
     <section class="impact-section">
         <div class="overlay"></div>
         <div class="impact-content">
-          <h2>This is the impact <span>YOU</span> helped us make in 2023-24</h2>
-          <p>Your support is helping us reach the unreached and donate food across India.</p>
-          <h1>2,000,000</h1>
-          <h3>Meals donated to those in need</h3>
-      </div>
+            <h2>This is the impact <span>YOU</span> helped us make in 2023-24</h2>
+            <p>Your support is helping us reach the unreached and donate food across India.</p>
+            <h1>2,000,000</h1>
+            <h3>Meals donated to those in need</h3>
+        </div>
         
         <!-- Grid Layout -->
         <div class="impact-grid">
@@ -68,5 +68,83 @@
             </div>
         </div>
     </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-container">
+        <!-- Image on the left -->
+        <div class="faq-image">
+            <img src="../SRC/poor_happy_kid.jpg" alt="Helping Hands">
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-content">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq">
+                <div class="faq-question">What is food donation?</div>
+                <div class="faq-answer">
+                    Food donation is the act of giving excess food to those in need through NGOs and charities.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">How can I donate food?</div>
+                <div class="faq-answer">
+                    You can donate by reaching out to food banks, NGOs, or using our platform to connect with organizations in need.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">Who receives the donated food?</div>
+                <div class="faq-answer">
+                    The food is distributed to homeless shelters, orphanages, and individuals in need.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">Is my food donation safe?</div>
+                <div class="faq-answer">
+                    Yes, all donations go through quality checks before distribution to ensure safety and hygiene.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="subscribe-container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates directly to your inbox.</p>
+        
+        <div class="subscribe-box">
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="validateEmail()">Subscribe</button>
+        </div>
+        <p id="error-message"></p>
+    </div>
+    
+
+    <script src="../JAVASCRIPT/food_donation_home.js"></script>
 </body>
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
+        
+        <div class="row">
+        SEWASETU Copyright © 2025 - All rights reserved 
+        </div>
+        </div>
+        </footer>	
 </html>

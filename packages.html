@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Donation UI</title>
     <link rel="stylesheet" href="packages.css">
+    <!-- Add this in the <head> section -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="packages.js"></script>
 </head>
 <body>
@@ -12,12 +14,30 @@
   
   <div class="carousel-container">
     <div class="carousel">
-        <div class="slide">Slide 1</div>
-        <div class="slide">Slide 2</div>
-        <div class="slide">Slide 3</div>
-        <div class="slide">Slide 4</div>
+        <div class="slide">
+            <img src="images/kid1.jpg" alt="Slide 1">
+            <div class="slide-content">
+              <h2 class="slide-title">Feed a Dream</h2>
+              <p class="slide-description">Every meal provides a step towards a brighter future. Join us in nourishing hopes and creating smiles.</p>
+          </div>
+        </div>
+        <div class="slide">
+            <img src="images/kid2.jpg" alt="Slide 2">
+            <div class="slide-content">
+              <h2 class="slide-title">Make an Impact</h2>
+              <p class="slide-description">Every contribution counts. Together we can create a better future for underprivileged children.</p>
+          </div>
+        </div>
+        <div class="slide">
+            <img src="images/kid3.jpg" alt="Slide 3">
+            <div class="slide-content">
+              <h2 class="slide-title">Celebrate Giving</h2>
+              <p class="slide-description">Turn special moments into meaningful memories. Your birthday celebration can bring joy to children who need it most.</p>
+          </div>
+        </div>
     </div>
     <div class="indicators"></div>
+    <hr class="horizontal-rule">
 </div>
 
 
@@ -25,7 +45,7 @@
     <div class="container">
       <div class="product-card" data-product="foodPackets">
         <h2 class="product-title">Food Packets (20 Kids)</h2>
-        <img src="images/cake1.jpg" alt="Food Packets" class="product-image">
+        <img src="images/package.jpg" alt="Food Packets" class="product-image">
         <div class="product-info">
             <div>
                 <div class="price">Rs. 35/Unit</div>
@@ -35,13 +55,13 @@
                 <span class="quantity-value">1</span>
                 <button onclick="handleQuantityChange('foodPackets', true)" class="quantity-btn">+</button>
             </div>
-            <button class="add-btn">Add+</button>
+            <button class="add-btn">Add</button>
         </div>
     </div>
   
       <div class="product-card" data-product="birthdayCake">
         <h2 class="product-title">Birthday Cake</h2>
-        <img src="images/cake2.jpg" alt="Food Packets" class="product-image">
+        <img src="images/bdaycake.jpg" alt="Food Packets" class="product-image">
         <div class="product-info">
             <div>
                 <div class="price">Rs. 300/Unit</div>
@@ -51,13 +71,13 @@
                 <span class="quantity-value">1</span>
                 <button onclick="handleQuantityChange('birthdayCake', true)" class="quantity-btn">+</button>
             </div>
-            <button class="add-btn">Add+</button>
+            <button class="add-btn">Add</button>
         </div>
     </div>
   
     <div class="product-card" data-product="birthdayParty">
       <h2 class="product-title">Birthday Party</h2>
-      <img src="images/cake3.jpg" alt="Food Packets" class="product-image">
+      <img src="images/party.jpg" alt="Food Packets" class="product-image">
       <div class="product-info">
           <div>
               <div class="price">Rs. 700/Unit</div>
@@ -67,13 +87,13 @@
               <span class="quantity-value">1</span>
               <button onclick="handleQuantityChange('birthdayParty', true)" class="quantity-btn">+</button>
           </div>
-          <button class="add-btn">Add+</button>
+          <button class="add-btn">Add</button>
       </div>
   </div>
   
   <div class="product-card" data-product="cakeAndFood">
     <h2 class="product-title">Cake and Food</h2>
-    <img src="images/cake4.jpg" alt="Food Packets" class="product-image">
+    <img src="images/combo.webp" alt="Food Packets" class="product-image">
     <div class="product-info">
         <div>
             <div class="price">Rs. 1000/Unit</div>
@@ -83,10 +103,15 @@
             <span class="quantity-value">1</span>
             <button onclick="handleQuantityChange('cakeAndFood', true)" class="quantity-btn">+</button>
         </div>
-        <button class="add-btn">Add+</button>
+        <button class="add-btn">Add</button>
     </div>
 </div>
     </div>
+
+
+    <button class="add-logo-btn">
+      <span class="material-symbols-outlined">shopping_bag</span>
+  </button>
 
     <div class="donation-panel">
         <div class="amount-header">

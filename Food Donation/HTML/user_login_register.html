@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Register</title>
+    <link rel="stylesheet" href="../CSS/user_login_register.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button">Home</a>
+        <a href="about_us.html" class="nav-button">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="./get_involved.html" class="nav-button">Get Involved</a>
+        <a href="./user_login_register.html" class="nav-button active">Donate</a>
+    </nav>
+
+    <!-- Login/Register Form -->
+    <div class="form-container">
+        <div class="form-box">
+            <h2 id="form-title">Login</h2>
+            <form id="auth-form">
+                <input type="text" id="name" placeholder="Full Name" style="display: none;">
+                <input type="text" id="phone" placeholder="Phone Number" style="display: none;">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" style="display: none;">
+                <button type="submit" class="form-button">Login</button>
+                <p id="toggle-text">Don't have an account? <a href="#" id="toggle-form">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                SEWASETU Copyright © 2025 - All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JAVASCRIPT/user_login_register.js">
+        
+    </script>
+</body>
+</html>

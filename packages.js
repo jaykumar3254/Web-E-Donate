@@ -1,12 +1,10 @@
 let totalAmount = 0;
-
 const quantities = {
     foodPackets: 0,
     birthdayCake: 0,
     birthdayParty: 0,
     cakeAndFood: 0
 };
-
 const prices = {
     foodPackets: 35,
     birthdayCake: 300,
@@ -14,85 +12,132 @@ const prices = {
     cakeAndFood: 1000
 };
 
-function updateQuantityDisplay(productId) {
-    const productCard = document.querySelector(`[data-product="${productId}"]`);
-    const quantityElement = productCard.querySelector('.quantity-value');
-    const quantityControls = productCard.querySelector('.quantity-controls');
-    const addButton = productCard.querySelector('.add-btn');
-
-    if (quantities[productId] === 0) {
-        quantityControls.style.display = 'none';
-        addButton.style.display = 'block';
-    } else {
-        quantityControls.style.display = 'flex';
-        addButton.style.display = 'none';
-        quantityElement.textContent = quantities[productId];
-    }
-}
-
-function updateTotalAmount() {
-    totalAmount = Object.keys(quantities).reduce((sum, productId) => {
-        return sum + (quantities[productId] * prices[productId]);
-    }, 0);
-
-    document.querySelector('.amount-header span:last-child').textContent = `₹ ${totalAmount}`;
-}
-
-function handleQuantityChange(productId, increment) {
-    if (increment) {
-        quantities[productId]++;
-    } else {
-        quantities[productId] = Math.max(0, quantities[productId] - 1);
-    }
-
-    updateQuantityDisplay(productId);
-    updateTotalAmount();
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Product card initialization
+    // Create cart modal
+    const cartModal = document.createElement('div');
+    cartModal.className = 'cart-modal';
+    cartModal.innerHTML = `
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    `;
+    document.body.appendChild(cartModal);
+
+    // Cart button click handler
+    const cartBtn = document.querySelector('.add-logo-btn');
+    cartBtn.addEventListener('click', () => {
+        cartModal.style.display = 'block';
+        fetchCartItems();
+    });
+
+    // Close cart modal
+    cartModal.querySelector('.close-cart').addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+
     document.querySelectorAll('.product-card').forEach(productCard => {
         const productId = productCard.getAttribute('data-product');
         const addButton = productCard.querySelector('.add-btn');
+        const quantityControls = productCard.querySelector('.quantity-controls');
+        const quantityValue = productCard.querySelector('.quantity-value');
 
-        addButton.addEventListener('click', () => {
+        quantityControls.style.display = "none";
+
+        addButton.addEventListener('click', async () => {
             quantities[productId] = 1;
-            updateQuantityDisplay(productId);
+            quantityValue.textContent = quantities[productId];
+            quantityControls.style.display = "flex";
+            addButton.style.display = "none";
             updateTotalAmount();
+
+            const productName = productCard.querySelector('.product-title').textContent;
+            await addToCart(productId, productName, quantities[productId], prices[productId]);
         });
 
-        updateQuantityDisplay(productId);
+        productCard.querySelector('.quantity-btn:nth-child(3)').addEventListener('click', async () => {
+            quantities[productId]++;
+            quantityValue.textContent = quantities[productId];
+            updateTotalAmount();
+            
+            const productName = productCard.querySelector('.product-title').textContent;
+            await addToCart(productId, productName, quantities[productId], prices[productId]);
+        });
+
+        productCard.querySelector('.quantity-btn:first-child').addEventListener('click', async () => {
+            if (quantities[productId] > 1) {
+                quantities[productId]--;
+                quantityValue.textContent = quantities[productId];
+            } else {
+                quantities[productId] = 0;
+                quantityControls.style.display = "none";
+                addButton.style.display = "block";
+            }
+            updateTotalAmount();
+        });
     });
 
-    // Carousel initialization
+    // Carousel Code
     const carousel = document.querySelector('.carousel');
     const slides = document.querySelectorAll('.slide');
     const indicatorsContainer = document.querySelector('.indicators');
     let currentSlide = 0;
     const slideCount = slides.length;
+    let isTransitioning = false;
 
-    // Create indicators
     slides.forEach((_, index) => {
         const indicator = document.createElement('div');
         indicator.className = 'indicator';
         if (index === 0) indicator.classList.add('active');
-        indicator.addEventListener('click', () => goToSlide(index));
+        indicator.addEventListener('click', () => {
+            if (!isTransitioning) goToSlide(index);
+        });
         indicatorsContainer.appendChild(indicator);
     });
 
     const indicators = document.querySelectorAll('.indicator');
 
+    const prevButton = document.createElement('button');
+    prevButton.className = 'carousel-nav prev';
+    prevButton.innerHTML = '❮';
+    prevButton.addEventListener('click', () => {
+        if (!isTransitioning) prevSlide();
+    });
+
+    const nextButton = document.createElement('button');
+    nextButton.className = 'carousel-nav next';
+    nextButton.innerHTML = '❯';
+    nextButton.addEventListener('click', () => {
+        if (!isTransitioning) nextSlide();
+    });
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.appendChild(prevButton);
+    carouselContainer.appendChild(nextButton);
+
     function updateSlide() {
+        isTransitioning = true;
+        carousel.style.transition = 'transform 0.8s ease';
         carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
         
-        // Update indicators
         indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentSlide);
         });
+        
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 800);
     }
 
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slideCount;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
         updateSlide();
     }
 
@@ -101,6 +146,81 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlide();
     }
 
-    // Auto advance slides every 3 seconds
-    setInterval(nextSlide, 3000);
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    carousel.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 5000));
+
+    // MongoDB Cart Functions
+    async function addToCart(productId, productName, quantity, price) {
+        try {
+            const response = await fetch('http://localhost:3000/api/cart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId, productName, quantity, price, totalPrice: quantity * price }),
+            });
+
+            if (!response.ok) throw new Error('Failed to add item to cart');
+
+            showNotification('Item added to cart');
+        } catch (error) {
+            showNotification('Failed to add item to cart: ' + error.message, 'error');
+        }
+    }
+
+    async function fetchCartItems() {
+        try {
+            const response = await fetch('http://localhost:3000/api/cart');
+            const items = await response.json();
+            
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total');
+
+            cartItemsContainer.innerHTML = items.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-header">
+                        <span>${item.productName}</span>
+                        <span>₹${item.totalPrice}</span>
+                    </div>
+                    <div class="cart-item-details">
+                        Quantity: ${item.quantity} × ₹${item.price}
+                    </div>
+                    <button onclick="removeFromCart('${item._id}')" class="remove-btn">
+                        Remove
+                    </button>
+                </div>
+            `).join('');
+
+            const total = items.reduce((sum, item) => sum + item.totalPrice, 0);
+            cartTotal.innerHTML = `<strong>Total: ₹${total}</strong>`;
+        } catch (error) {
+            console.error('Error fetching cart items:', error);
+        }
+    }
+
+    async function removeFromCart(itemId) {
+        try {
+            const response = await fetch(`http://localhost:3000/api/cart/${itemId}`, { method: 'DELETE' });
+            if (!response.ok) throw new Error('Failed to remove item');
+
+            fetchCartItems();
+            showNotification('Item removed from cart');
+        } catch (error) {
+            showNotification('Failed to remove item', 'error');
+        }
+    }
+
+    function showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+
+        document.body.appendChild(notification);
+        setTimeout(() => notification.remove(), 3000);
+    }
+
+    function updateTotalAmount() {
+        totalAmount = Object.keys(quantities).reduce((sum, productId) => sum + (quantities[productId] * prices[productId]), 0);
+        document.querySelector('.amount-header span:last-child').textContent = `₹ ${totalAmount}`;
+    }
 });
