@@ -200,9 +200,9 @@ body {
     color: white;
     padding: 10px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
-    width: 200px;
+    width: 150px;
     z-index: 1000;
 }
 
