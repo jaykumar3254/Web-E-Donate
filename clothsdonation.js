@@ -1,23 +1,25 @@
 const donationInputs = document.querySelectorAll(".donation-input");
-const totalCount = document.getElementById("total-count");
+        const totalCount = document.getElementById("total-count");
 
-donationInputs.forEach((input) => {
-  input.addEventListener("input", updateTotal);
-});
+        donationInputs.forEach((input) => {
+            input.addEventListener("input", updateTotal);
+        });
 
-function updateTotal() {
-  let total = 0;
-  donationInputs.forEach((input) => {
-    total += parseInt(input.value) || 0;
-  });
-  totalCount.textContent = total;
-
-  // Animate total count
-  totalCount.style.transform = "scale(1.2)";
-  setTimeout(() => {
-    totalCount.style.transform = "scale(1)";
-  }, 200);
-}
+        function updateTotal() {
+            let total = 0;
+            donationInputs.forEach((input) => {
+                total += parseInt(input.value) || 0;
+            });
+            totalCount.textContent = total;
+            
+            // Animate total count
+            totalCount.style.transform = "scale(1.2)";
+            totalCount.style.color = "#4caf50";
+            setTimeout(() => {
+                totalCount.style.transform = "scale(1)";
+                totalCount.style.color = "#ddd";
+            }, 300);
+        }
 
 // Form validation
 function validateForm() {
@@ -214,3 +216,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Make sure the first slide is displayed with flex to maintain layout
   slides[0].style.display = "flex";
 });
+

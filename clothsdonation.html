@@ -16,28 +16,28 @@
 </nav>
   <div class="slideshow-container">
     <div class="slide">
-        <img src="Images/sad baby.jpg" alt="Slide 1">
+        <img src="content/sad baby.jpg" alt="Slide 1">
         <div class="text-content">
           <h2>Donate Clothes, Change Lives</h2>
           <p>A child’s laughter, a warm hug, a heart full of hope—your donations can make this happen. Give your pre-loved clothes, toys, and books a new purpose!</p>
         </div>        
     </div>
     <div class="slide">
-        <img src="Images/books donation.jpg" alt="Slide 2">
+        <img src="content/books donation.jpg" alt="Slide 2">
         <div class="text-content">
           <h2>Give Warmth in Winter</h2>
           <p>Your old clothes can bring warmth, your unused toys can bring joy, and your books can spark dreams. A small act of kindness can change a life—donate today!</p>  
         </div>  
     </div>
     <div class="slide">
-        <img src="Images/sad baby.jpg" alt="Slide 3">
+        <img src="content/emotional.jpg" alt="Slide 3">
         <div class="text-content">
           <h2>Make an Impact Today</h2>
           <p>The things you no longer need could mean the world to someone else. Share your kindness—donate clothes, toys, and books, and bring smiles to those in need!</p>
         </div>
     </div>
-    <button class="prev" onclick="changeSlide(-1)">❮</button>
-    <button class="next" onclick="changeSlide(1)">❯</button>
+    <button class="prev" onclick="changeSlide(-1)"></button>
+    <button class="next" onclick="changeSlide(1)"></button>
   </div>
 
 
@@ -53,24 +53,30 @@
       </div>
       
       <div class="container">
+        <h2>Donate to Kids in Need</h2>
+        <p>Make a difference by donating clothes, toys, and books to children.</p>
         <div class="donation-types">
-          <div class="donation-card">
-            <h3>Clothes</h3>
-            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="clothes">
-          </div>
-          <div class="donation-card">
-            <h3>Toys</h3>
-            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="toys">
-          </div>
-          <div class="donation-card">
-            <h3>Books</h3>
-            <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="books">
-          </div>
+            <div class="donation-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="Clothes">
+                <h3>Clothes</h3>
+                <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="clothes">
+            </div>
+            <div class="donation-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2566/2566387.png" alt="Toys">
+                <h3>Toys</h3>
+                <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="toys">
+            </div>
+            <div class="donation-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995566.png" alt="Books">
+                <h3>Books</h3>
+                <input type="number" min="0" placeholder="Quantity" class="donation-input" data-type="books">
+            </div>
         </div>
-        
         <div class="donation-total">Total Items: <span id="total-count">0</span></div>
+    </div>
+        
 
-        <div>
+        <div class="Maininfo">
           <p>"Share the Warmth, Spark a Smile!"
 
             Imagine a child’s joy when they hug a toy for the first time. Think of the warmth a cozy sweater brings to someone in need. Picture the excitement in a child’s eyes when they open a book filled with endless stories and possibilities.
@@ -83,7 +89,7 @@
         </div>
         
         <div class="donation-form">
-          <h2>Your Information</h2>
+          <h2>Helping Hands</h2>
           <div class="input-group">
             <label>Name</label>
             <input type="text" placeholder="Your full name" id="name">
@@ -111,14 +117,30 @@
           </div>
           <button class="submit-btn" onclick="submitForm()">Submit Donation</button>
           <div class="hash-tags">
+
             <h3>#GiveWithLove #SpreadHappiness #DonationDrive</h3>
           </div>
         </div>
       </div>
       
-      <div class="success-message" id="success-message">
-        Thank you for your donation!
-      </div>
+      <section id="interactive-images" class="interactive-section">
+        <h2>Explore Our Work</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="content/achievements1.png" alt="Support">
+                <div class="info">Delivering meals to children in need.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/achievements2.png" alt="Inneed">
+                <div class="info">Donating toys and clothes positively impacts the growth and well-being of children who cannot afford them.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/achievement3.png" alt="Happy Family">
+                <div class="info">Providing quality education to underprivileged childen and helping families.</div>
+            </div>
+        </div>
+    </section>
+<hr class="horizontal-rule" color="red">
 
       <footer>
         <div class="footer">
