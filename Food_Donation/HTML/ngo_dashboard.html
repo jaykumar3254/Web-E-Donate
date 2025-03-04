@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Dashboard</title>
+    <link rel="stylesheet" href="../CSS/ngo_dashboard.css">
+    <script defer src="../JAVASCRIPT/ngo_dashboard.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>NGO Dashboard</h2>
+        <ul>
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="./logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Header -->
+        <header>
+            <h1>Welcome, [NGO Name]</h1>
+            <p>Manage food donations efficiently</p>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Donations</h3>
+                <p id="total-donations">0</p>
+            </div>
+            <div class="stat-card pending">
+                <h3>Pending Donations</h3>
+                <p id="pending-donations">0</p>
+            </div>
+            <div class="stat-card accepted">
+                <h3>Accepted Donations</h3>
+                <p id="accepted-donations">0</p>
+            </div>
+        </section>
+
+        <!-- Food Donations Table -->
+        <section class="dashboard-section">
+            <h2>Food Donations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Donor Name</th>
+                        <th>Food Type</th>
+                        <th>Quantity</th>
+                        <th>Pickup Location</th>
+                        <th>Pickup Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="donation-list">
+                    <!-- Dynamic Data from JS -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+</html>
