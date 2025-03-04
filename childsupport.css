@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: black;
     color: white;
     margin: 0;
@@ -18,7 +18,36 @@ body {
     width: 100%;
     z-index: 1000;
 }
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+}
 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    position: relative;
+    right: 0.001%;
+    justify-content: right;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .active {
+    background-color: red;
+    border-radius: 5px;
+}
 /* Navigation Menu Items */
 .nav-button {
     text-decoration: none;

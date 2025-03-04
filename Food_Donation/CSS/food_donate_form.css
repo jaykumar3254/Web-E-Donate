@@ -19,6 +19,7 @@ body::before {
     z-index: -1;
 }
 
+
 /* Navigation Bar */
 .navbar {
     display: flex;
