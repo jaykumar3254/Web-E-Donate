@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Fade Transition</title>
+    <title>NGO Registration</title>
     <link rel="stylesheet" href="registration.css">
+    <style>
+        /* Ensuring the image stays as the background */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Foreground image (Mouse reveals background) -->
-        <img src="content/happboys.jpg" class="image top-image" alt="Top Image">
-        
-        <!-- Masked Background Image -->
-        <div class="mask">
-            <img src="content/help.jpg" class="image background-image" alt="Background Image">
+    <!-- Background Image -->
+    <img src="content/donation.avif" alt="Background Image" class="bg-image">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button">Home</a>
+        <a href="about_us.html" class="nav-button">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="./get_involved.html" class="nav-button">Get Involved</a>
+        <a href="./user_login_register.html" class="nav-button active">Donate</a>
+    </nav>
+
+    <!-- NGO Registration Form -->
+    <div class="form-container">
+        <div class="form-box">
+            <h2>NGO Registration</h2>
+            <form id="ngoForm">
+                <label for="ngo-name">NGO Name*</label>
+                <input type="text" id="ngo-name" placeholder="Enter NGO Name" required>
+    
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+    
+                <label for="contact">Contact Number*</label>
+                <input type="tel" id="contact" placeholder="Enter Contact Number" required>
+    
+                <label for="website">Website (Optional)</label>
+                <input type="url" id="website" placeholder="Website URL">
+    
+                <label for="registration-number">Registration Number*</label>
+                <input type="text" id="registration-number" placeholder="Enter Registration Number" required>
+    
+                <label for="mission">NGO Mission Statement*</label>
+                <textarea id="mission" placeholder="Describe your NGO's mission..." required></textarea>
+    
+                <label for="logo">Upload Logo*</label>
+                <input type="file" id="logo" accept="image/*" required>
+    
+                <button type="submit" class="register-button">Register NGO</button>
+            </form>
         </div>
-
-        <!-- Image 3: Appears under the circular fade effect -->
-        <img src="content/happboys.jpg" class="image new-bg" alt="New Background">
-
-        <!-- Circular fade effect -->
-        <div class="circle-fade"></div>
-
-        <!-- Button to trigger effect -->
-        <!--<div class="button-container">
-            <button class="submit-btn" onclick="revealNewBackground(event)">Donate</button>
-        </div>-->
-    </div>
-
-    <!-- Floating Registration Form -->
-    <div class="form-container hidden" id="registrationForm">
-        <div class="form-header">
-            <h2>Register</h2>
-            <button class="close-btn" onclick="closeForm()">×</button>
-        </div>
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="date" placeholder="Date Of Birth" required>
-            <select id="gender" name="gender">
-                <option value="Male">Male</option>
-                <option value="female">female</option>
-                <option value="other">other</option>
-            </select required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="text" placeholder="Full Address" required>
-            <button type="submit" class="form-submit" onclick="revealNewBackground(event)">Register</button>
-        </form>
     </div>
 
     <script src="registration.js"></script>
