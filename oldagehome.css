@@ -24,19 +24,37 @@ body::-webkit-scrollbar {
 {
     background-color: black;
 }
+.navbar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: black;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navigation Menu Items */
 .nav-button {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
-    padding: 10px 10px; /* Padding around the text */
-    margin: 5 10px; /* Space between buttons */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid transparent; /* Border for hover effect */
-    border-radius: 0px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth hover transition */
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 .nav-button:hover {
-    border-color: red; /* Add border on hover */
+    border-color: red;
+}
+
+.nav-button:hover, .active {
+    background-color: red;
+    border-radius: 5px;
 }
 .logo {
     align-self: flex-start;
