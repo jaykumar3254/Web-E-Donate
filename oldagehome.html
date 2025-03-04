@@ -8,7 +8,7 @@
     </head>
     <body style="background-color: black;">
         <nav class="navbar">
-            <a href="#home" class="nav-button">COVID-19 SUPPORT</a>
+            <a href="covid.html" class="nav-button">COVID-19 SUPPORT</a>
             <a href="#about" class="nav-button">CNCP</a>
             <a href="#services" class="nav-button">WHAT WE DO</a>
             <a href="#portfolio" class="nav-button">VOLUNTEER</a>
@@ -16,18 +16,24 @@
         </nav>
         <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <!-- <img class="backimgs" src="content/bacccha.jpg" />-->
-        <form action="submit_donation.php" method="post">
+        <form action="registration.html" method="get">
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+            <label for="Mo-no">Mobile No:</label>
+            <input type="tel" id="Mo-no" name="mo-no" placeholder="Enter Mobile " required>
     
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+            <label for="Aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhaar number" inputmode="numeric" required>
     
             <label for="amount">Donation Amount (Rs):</label>
-            <!--<input type="number" id="amount" name="amount" min="1" required>            -->
-            <div style="display: flex; gap: 2px;">
+            <!--<input type="number" id="amount" name="amount" min="1" required>    -->
+          <!--  <div style="display: flex; gap: 2px;">
                 <button class="btn">One Time</button>
-                <button class="btn">Monthly</button>
+                <button class="btn">Monthly</button>-->
             </div>
             <div style="display: flex; gap: 2px;">
                 <button class="btn1">1000</button>
@@ -36,7 +42,7 @@
             </div>
             <div style="display: flex; gap: 10px; padding-top: 15px; padding-bottom: 15px;">
                 <label>Enter your own amount :</label>
-                <input type="number" id="amount" min="1000"/>
+                <input type="number" id="amount" min="1000" placeholder="Enter Amt"/>
             </div>
             <div style="display: flex; gap: 10px; padding-bottom: 15px;">
                 <label>I Pledge My Support For </label>
@@ -55,6 +61,12 @@
             </select>
     
             <button class="beat-button" type="submit">Donate Now</button>
+            <div style="color: white; text-align: center; padding: 10px;">
+                <p>
+                    ( All information should be as per Aadhar )
+                </p>
+            </div>
+            <script src="oldagehome.js"></script>
         </form>
             <h1 style="background-color: rgb(101, 101, 101); color: wheat;">EXPLORE WHAT YOU CAN DO TO CHANGE LIVES !</h1> 
             <div style="width: 900px;">
@@ -68,7 +80,8 @@
                     <img style="position: relative; width: 95%; margin-top: 120px; padding: 40px;" src="content/dadiji1.webp"/>
                     <div class="ov1">
                         <h2>It's not how much we give but how much love we put in giving <br><br> -Mother Teresa</h2>
-                        <button class="beat-button" type="submit">Donate Now</button>
+                        <button class="beat-button" onclick="scrollToTop()" id="topbtn">Donate Now</button>
+                        <script src="oldagehome.js"></script>
                     </div>
                 </body>
                 <div style="padding: 40px; background-color: rgb(41, 41, 41); ">
