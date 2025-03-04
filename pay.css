@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f6f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Donation Box */
+.donation-container {
+    display: flex;
+    gap: 20px;
+}
+
+.donation-box, .summary-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 550px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.amount-buttons button, .frequency-toggle button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type='number'] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.donate-button {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-button.active {
+    background-color: #28a745;
+}
+
+.summary-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tax-benefits {
+    background: #ffd700;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Personal Details Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin-top: 20px;
+   
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #f5f5f5;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

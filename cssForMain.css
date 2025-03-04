@@ -330,4 +330,31 @@ body::-webkit-scrollbar {
     transform: translateY(-10px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
+.mission-section {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif; /* Professional look */
+    color: white;
+    padding: 50px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.mission-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typewriter-text2 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    display: inline-block;
+    width: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: wheat;
+    transition: width 2s steps(40, end);
+}
 

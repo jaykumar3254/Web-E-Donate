@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <script src="pay.js" defer></script>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    
+    </div>
+    <div class="donation-container">
+        <div class="donation-box">
+            <h2>Donation Amount</h2>
+            <div class="amount-buttons">
+                <button onclick="setAmount(1000)">₹ 1000</button>
+                <button onclick="setAmount(2500)">₹ 2500</button>
+                <button onclick="setAmount(5000)">₹ 5000</button>
+                <button onclick="setAmount(7500)">₹ 7500</button>
+                <button onclick="setAmount(10000)">₹ 10000</button>
+            </div>
+            <input type="number" id="amount" placeholder="₹ .00" oninput="updateSummary()">
+            
+            <h2>Donation Frequency</h2>
+            <div class="frequency-toggle">
+                <button id="one-time" class="active" onclick="setFrequency('one-time')">One Time</button>
+                <button id="recurring" onclick="setFrequency('recurring')">Recurring</button>
+            </div>
+
+            <h2>Platform Tip</h2>
+            <p>Your donation goes to the beneficiary, while your tip supports the platform and helps reach more donors like you.</p>
+            <input type="range" id="tip" min="0" max="30" value="0" oninput="updateTip()">
+            <span id="tipValue">0%</span>
+            
+            <button id="donateBtn" class="donate-button" onclick="payNow()">Donate now (₹ 0)</button>
+        </div>
+        
+        <div class="summary-box">
+            <img src="content/smile.png" alt="Children Smiling">
+            <h3>Fundraising Campaign 2024-25</h3>
+            <p>Donation Amount: ₹<span id="donation">0</span></p>
+            <p>Platform fee (5%): ₹<span id="platformFee">0</span></p>
+            <p>Total Amount: ₹<span id="total">0</span></p>
+            <button class="donate-button" onclick="payNow()">Donate now (₹ 0)</button>
+            <div class="tax-benefits">Receive <a href="#">Tax Benefits</a> by donating to this cause</div>
+        </div>
+    </div>
+
+    <!-- Personal Details Card (Hidden Initially) -->
+    <div id="personalDetailsCard" class="card hidden">
+        <h2>Personal Details</h2>
+
+        <div id="personalDetailsCard" class="card hidden">
+            <h2>Personal Details</h2>
+            <form>
+                <label for="name">Name*</label>
+                <input type="text" id="name" placeholder="Name*" required>
+        
+                <div class="checkbox-container">
+                    <input type="checkbox" id="anonymous">
+                    <label for="anonymous">Keep my donation anonymous</label>
+                </div>
+        
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="Email*" required>
+        
+                <label for="mobile">Mobile Number*</label>
+                <input type="tel" id="mobile" placeholder="Mobile Number*" required>
+        
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Location">
+        
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tax-cert" onclick="togglePAN()">
+                    <label for="tax-cert"><b>Get Indian tax certificate for your donation.</b></label>
+                </div>
+        
+                <div id="pan-section" class="hidden">
+                    <p><strong>Enter Your PAN for Tax Compliance</strong></p>
+                    <p>Pan is mandatory to avail tax benefit or if the amount is more than 50,000 rupees</p>
+                    <input type="text" id="pan" placeholder="PAN NUMBER">
+                </div>
+        
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I have read the <a href="#">Terms & Conditions</a></label>
+                </div>
+            </form>
+        </div>
+
+</body>
+</html>
