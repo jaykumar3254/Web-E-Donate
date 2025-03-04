@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "css-ui-lib": "^1.0.0",
+    "node": "^23.9.0",
     "pg": "^8.13.3"
   }
 }
