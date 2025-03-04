@@ -11,36 +11,10 @@ body {
     height: 100vh;
 }
 
-/* Navigation Bar */
-.navbar {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 0;
-    text-align: right;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.navbar .nav-button {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 15px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.navbar .nav-button:hover,
-.navbar .nav-button.active {
-    background-color: red;
-}
-
 /* Form Container */
 .form-container {
     background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
+    padding: 28px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -66,8 +40,7 @@ label {
     display: block;
 }
 
-input,
-textarea {
+input, textarea, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -78,8 +51,12 @@ textarea {
     color: black;
 }
 
-input:focus,
-textarea:focus {
+/* Dropdown Styling */
+select {
+    cursor: pointer;
+}
+
+input:focus, textarea:focus, select:focus {
     outline: none;
     border: 2px solid red;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
@@ -101,32 +78,6 @@ textarea:focus {
 
 .register-button:hover {
     background-color: darkred;
-}
-
-/* Footer */
-.footer {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-}
-
-.footer .row {
-    margin: 10px 0;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.footer a:hover {
-    color: red;
 }
 
 /* Responsive */
