@@ -6,7 +6,7 @@
     <title>NGO Registration</title>
     <link rel="stylesheet" href="registration.css">
     <style>
-        /* Ensuring the image stays as the background */
+        /* Background Image */
         .bg-image {
             position: fixed;
             top: 0;
@@ -22,15 +22,6 @@
 
     <!-- Background Image -->
     <img src="content/donation.avif" alt="Background Image" class="bg-image">
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="./food_donation_home.html" class="nav-button">Home</a>
-        <a href="about_us.html" class="nav-button">About Us</a>
-        <a href="./what_we_do.html" class="nav-button">What we do</a>
-        <a href="./get_involved.html" class="nav-button">Get Involved</a>
-        <a href="./user_login_register.html" class="nav-button active">Donate</a>
-    </nav>
 
     <!-- NGO Registration Form -->
     <div class="form-container">
@@ -52,8 +43,15 @@
                 <label for="registration-number">Registration Number*</label>
                 <input type="text" id="registration-number" placeholder="Enter Registration Number" required>
     
-                <label for="mission">NGO Mission Statement*</label>
-                <textarea id="mission" placeholder="Describe your NGO's mission..." required></textarea>
+                <!-- Dropdown List for NGO Type -->
+                <label for="ngo-type">Select NGO Type*</label>
+                <select id="ngo-type" required>
+                    <option value="" disabled selected>Choose NGO Type</option>
+                    <option value="old-age">Old Age Support</option>
+                    <option value="child-support">Child Support</option>
+                    <option value="food-donation">Food Donation</option>
+                    <option value="toy-cloth-donation">Toy/Cloth Donation</option>
+                </select>
     
                 <label for="logo">Upload Logo*</label>
                 <input type="file" id="logo" accept="image/*" required>
