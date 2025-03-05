@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head style="background-color: black;">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MAD</title>
-        <link rel="stylesheet" href="oldagehome.css">
-    </head>
-    <body style="background-color: black;">
-           <!-- Navigation Bar -->
+<head style="background-color: black;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD</title>
+    <link rel="stylesheet" href="oldagehome.css">
+</head>
+<body style="background-color: black;">
+
     <nav class="navbar">
         <a href="./food_donation_home.html" class="nav-button">Home</a>
         <a href="about_us.html" class="nav-button">About Us</a>
@@ -15,241 +15,228 @@
         <a href="get-involved.html" class="nav-button">Get Involved</a>
         <a href="donate.html" class="nav-button active">Donate</a>
     </nav>
-        <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <img class="backimgs" src="content/bacccha.jpg" />-->
-        <form action="registration.html" method="get">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter Name" required>
 
-            <label for="Mo-no">Mobile No:</label>
-            <input type="tel" id="Mo-no" name="mo-no" placeholder="Enter Mobile " required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+    <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allowfullscreen></iframe>
 
-            <label for="Aadhar">Aadhar Number:</label>
-            <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhaar number" inputmode="numeric" required>
-    
-            <label for="amount">Donation Amount (Rs):</label>
-            <!--<input type="number" id="amount" name="amount" min="1" required>    -->
-          <!--  <div style="display: flex; gap: 2px;">
-                <button class="btn">One Time</button>
-                <button class="btn">Monthly</button>-->
-            </div>
-            <div style="display: flex; gap: 2px;">
-                <button class="btn1">1000</button>
-                <button class="btn1">1500</button>
-                <button class="btn1">2000</button>
-            </div>
-            <div style="display: flex; gap: 10px; padding-top: 15px; padding-bottom: 15px;">
-                <label>Enter your own amount :</label>
-                <input type="number" id="amount" min="1000" placeholder="Enter Amt"/>
-            </div>
-            <div style="display: flex; gap: 10px; padding-bottom: 15px;">
-                <label>I Pledge My Support For </label>
-                <select id="supportTo" name="typeofDonation">
-                    <option value="Elder-Care">Elder Care</option>
-                    <option value="Cancer-care">Cancer Care</option>
-                    <option value="Eye-Care">Eye Care</option>
-                    <option value="Community-Health-Care">Community Health Care</option>                    
-                </select>
-            </div>
-            <label for="payment">Payment Method:</label>
-            <select id="payment" name="payment">
-                <option value="credit_card">Credit Card</option>
-                <option value="paypal">BHIM-UPI</option>
-                <option value="bank_transfer">Bank Transfer</option>
-            </select>
-    
-            <button class="beat-button" type="submit">Donate Now</button>
-            <div style="color: white; text-align: center; padding: 10px;">
-                <p>
-                    ( All information should be as per Aadhar )
-                </p>
-            </div>
+    <form id="donationForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+        <label for="Mo-no">Mobile No:</label>
+        <input type="tel" id="Mo-no" name="mo-no" placeholder="Enter Mobile " required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+        <label for="Aadhar">Aadhar Number:</label>
+        <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhaar number" inputmode="numeric" required>
+
+        <label for="amount">Donation Amount (Rs):</label>
+        <input type="number" id="amount" name="amount" min="1000" placeholder="Enter Amount" required>
+
+        <label>I Pledge My Support For</label>
+        <select id="supportTo" name="typeofDonation">
+            <option value="Elder-Care">Elder Care</option>
+            <option value="Cancer-care">Cancer Care</option>
+            <option value="Eye-Care">Eye Care</option>
+            <option value="Community-Health-Care">Community Health Care</option>
+        </select>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment">
+            <option value="credit_card">Credit Card</option>
+            <option value="upi">BHIM-UPI</option>
+            <option value="bank_transfer">Bank Transfer</option>
+        </select>
+
+        <button class="beat-button" type="submit">Donate Now</button>
+        <div style="color: white; text-align: center; padding: 10px;">
+            <p>(All information should be as per Aadhar)</p>
+        </div>
+    </form>
+    <h1 style="background-color: rgb(101, 101, 101); color: wheat;">EXPLORE WHAT YOU CAN DO TO CHANGE LIVES !</h1> 
+    <div style="width: 900px;">
+        <h2 style="color: white;">It is never to late make a difference. All you have to do is take action.
+        Learn who to call for help and how the process works, donate to improve our 
+        support systems, volunteer your time or simply spread awareness. It all counts!</h2>
+    </div>
+    <script src="oldagehome.js"></script>
+
+</body>
+<div class="video-container">
+    <body>
+        <img style="position: relative; width: 95%; margin-top: 120px; padding: 40px;" src="content/dadiji1.webp"/>
+        <div class="ov1">
+            <h2>It's not how much we give but how much love we put in giving <br><br> -Mother Teresa</h2>
+            <button class="beat-button" onclick="scrollToTop()" id="topbtn">Donate Now</button>
             <script src="oldagehome.js"></script>
-        </form>
-            <h1 style="background-color: rgb(101, 101, 101); color: wheat;">EXPLORE WHAT YOU CAN DO TO CHANGE LIVES !</h1> 
-            <div style="width: 900px;">
-                <h2 style="color: white;">It is never to late make a difference. All you have to do is take action.
-                Learn who to call for help and how the process works, donate to improve our 
-                support systems, volunteer your time or simply spread awareness. It all counts!</h2>
-            </div>
+        </div>
     </body>
-            <div class="video-container">
-                <body>
-                    <img style="position: relative; width: 95%; margin-top: 120px; padding: 40px;" src="content/dadiji1.webp"/>
-                    <div class="ov1">
-                        <h2>It's not how much we give but how much love we put in giving <br><br> -Mother Teresa</h2>
-                        <button class="beat-button" onclick="scrollToTop()" id="topbtn">Donate Now</button>
-                        <script src="oldagehome.js"></script>
-                    </div>
-                </body>
-                <div style="padding: 40px; background-color: rgb(41, 41, 41); ">
-                    <h3 class="paragraph"> India, a land known for its deep-rooted values of respect and care for elders, is now witnessing a heartbreaking reality—millions of senior citizens abandoned, neglected, and struggling to survive in dire conditions. Many elderly individuals, once the pillars of their families, are now left to fend for themselves in overcrowded, underfunded old-age homes or, worse, on the streets. The very hands that once nurtured, guided, and built families are now trembling with hunger, illness, and loneliness.  <br><br>
-                        
-                        Imagine spending your last years in isolation, yearning for a single conversation, a warm meal, or a gentle touch of kindness. This is the reality for countless elderly individuals in India today. The saddest part? Most of them don’t even ask for much—just a little love, care, and basic necessities to live with dignity. They are not a burden; they are a treasure trove of wisdom and experience. It is our collective responsibility to ensure they do not spend their final years in despair.  <br><br>
-                        
-                        A small act of kindness can bring immense relief to them. Donating food, medicines, clothes, or even spending a few hours with them can brighten their day. Supporting an old-age home, volunteering, or even raising awareness can make a significant difference. If we can contribute to their well-being in any way, we should—because one day, we too will grow old.  <br>
-                        
-                        Let us not let the elderly in our country suffer in silence. Let’s stand together, support old-age homes, and ensure that no elderly person spends their days feeling unloved or abandoned.They once took care of us; now it’s our turn to take care of them. 
-                    </h3>
-                </div>
-            </div>
-            <!--
-            <div>
-                <div class="heart-container">
-                    <div class="main-heart"></div>
-                </div>
-                <script src="oldagehome.js"></script>
-            </div>
-            <div class="number-container">
-                <span class="digit" id="digit7">7</span>
-                <span class="digit" id="digit2">2</span>
-                <span class="digit" id="digit8">8</span>
-            </div>
-        
-            <script src="oldagehome.js"></script>  -->
+    <div style="padding: 40px; background-color: rgb(41, 41, 41); ">
+        <h3 class="paragraph"> India, a land known for its deep-rooted values of respect and care for elders, is now witnessing a heartbreaking reality—millions of senior citizens abandoned, neglected, and struggling to survive in dire conditions. Many elderly individuals, once the pillars of their families, are now left to fend for themselves in overcrowded, underfunded old-age homes or, worse, on the streets. The very hands that once nurtured, guided, and built families are now trembling with hunger, illness, and loneliness.  <br><br>
+            
+            Imagine spending your last years in isolation, yearning for a single conversation, a warm meal, or a gentle touch of kindness. This is the reality for countless elderly individuals in India today. The saddest part? Most of them don’t even ask for much—just a little love, care, and basic necessities to live with dignity. They are not a burden; they are a treasure trove of wisdom and experience. It is our collective responsibility to ensure they do not spend their final years in despair.  <br><br>
+            
+            A small act of kindness can bring immense relief to them. Donating food, medicines, clothes, or even spending a few hours with them can brighten their day. Supporting an old-age home, volunteering, or even raising awareness can make a significant difference. If we can contribute to their well-being in any way, we should—because one day, we too will grow old.  <br>
+            
+            Let us not let the elderly in our country suffer in silence. Let’s stand together, support old-age homes, and ensure that no elderly person spends their days feeling unloved or abandoned.They once took care of us; now it’s our turn to take care of them. 
+        </h3>
+    </div>
+</div>
+<!--
+<div>
+    <div class="heart-container">
+        <div class="main-heart"></div>
+    </div>
+    <script src="oldagehome.js"></script>
+</div>
+<div class="number-container">
+    <span class="digit" id="digit7">7</span>
+    <span class="digit" id="digit2">2</span>
+    <span class="digit" id="digit8">8</span>
+</div>
 
-            <div style="padding-top: 100px;" class="container">
-                <div class="stats">
-                    <div class="card">
-                        <span class="icon">♿</span>
-                        <h2>80,000</h2>
-                        <p>Elders received primary healthcare at their doorstep</p>
-                    </div>
+<script src="oldagehome.js"></script>  -->
+
+<div style="padding-top: 100px;" class="container">
+    <div class="stats">
+        <div class="card">
+            <span class="icon">♿</span>
+            <h2>80,000</h2>
+            <p>Elders received primary healthcare at their doorstep</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">💳</span>
+            <h2>100,000</h2>
+            <p>Elders became independent through Elder Self-Help-Groups</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">💛</span>
+            <h2>150,000</h2>
+            <p>Elders received support through the Elder Helpline</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">👁️</span>
+            <h2>55,000</h2>
+            <p>Elders received vision restoration support</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">🤝</span>
+            <h2>65,000</h2>
+            <p>Elders received digital, financial, and legal literacy</p>
+        </div>
+    </div>
+</div>
+<div class="faq-container">
+
+    <details>
+        <summary>Will i get a tax exemption for my donation ?</summary>
+        <div class="faq-content">
+            <p>Yes, you will receive a 50% tax reduction certificate under Section 80G, which will be sent to your registered email address or postal address.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>How do I receive my 80G certificate?</summary>
+        <div class="faq-content">
+            <p>The certificate will be sent to the email address provided by you at the time of donation upon successful completion of the transaction. Alternately, a physical copy will be posted to the address provided by you at the time of donation.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Where is my money spent?</summary>
+        <div class="faq-content">
+            <p>Your support helps us provide care and dignity to disadvantaged older persons across India under the following programmes – Agecare, Healthcare and Livelihoods & Disaster Management.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>How to contact if I have any queries?</summary>
+        <div class="faq-content">
+            <p>For general enquiries, please write to headoffice@helpageindia.org.
+                To get in touch with one of our State offices, please click on the following link:
+                Contact Us page link</p>
+        </div>
+    </details>
+    <details>
+        <summary>How can I donate to your organization?</summary>
+        <div class="faq-content">
+            <p>Please click on the following link where you can select your preferred mode of contribution.</p>
+        </div>
+    </details>
+</div>
+<script>
+    const details = document.querySelectorAll("details");
+
+    details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", function () {
+            // Close other open details
+            details.forEach((detail) => {
+                if (detail !== targetDetail) {
+                    detail.removeAttribute("open");
+                    let content = detail.querySelector(".faq-content");
+                    content.style.maxHeight = "0";
+                    content.style.opacity = "0";
+                }
+            });
+
+            // Handle opening animation
+            let content = this.querySelector(".faq-content");
+            if (this.hasAttribute("open")) {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                content.style.opacity = "1";
+            } else {
+                content.style.maxHeight = "0"; // Collapse
+                content.style.opacity = "0";
+            }
+        });
+
+        targetDetail.addEventListener("toggle", function () {
+            let content = this.querySelector(".faq-content");
+            if (this.open) {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                content.style.opacity = "1";
+            } else {
+                content.style.maxHeight = "0"; // Collapse
+                content.style.opacity = "0";
+            }
+        });
+    });
+</script>
+<div style="display: flex; gap: 2px; height: 200px; background-color: rgb(59, 59, 59);top: 5%;">
+    <div>
+        <h1 style="position: relative; left: 50%; color: white;">How To Reach Us !</h1>
+        <h3 style=" position: relative; color: white;left: 50%;">Stay up-to-date with all our latest developments and work</h3>
+        <input style="position: relative; left: 50%; background-color:rgb(0, 0, 0); width: 400px; " type="email" value="Enter your email" required/>
+        <input style="position: relative; left: 50%; background-color: rgb(255, 0, 0); width: 200px; "type="submit" value="Submit"/>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
         
-                    <div class="card">
-                        <span class="icon">💳</span>
-                        <h2>100,000</h2>
-                        <p>Elders became independent through Elder Self-Help-Groups</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">💛</span>
-                        <h2>150,000</h2>
-                        <p>Elders received support through the Elder Helpline</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">👁️</span>
-                        <h2>55,000</h2>
-                        <p>Elders received vision restoration support</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">🤝</span>
-                        <h2>65,000</h2>
-                        <p>Elders received digital, financial, and legal literacy</p>
-                    </div>
-                </div>
-            </div>
-            <div class="faq-container">
-        
-                <details>
-                    <summary>Will i get a tax exemption for my donation ?</summary>
-                    <div class="faq-content">
-                        <p>Yes, you will receive a 50% tax reduction certificate under Section 80G, which will be sent to your registered email address or postal address.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>How do I receive my 80G certificate?</summary>
-                    <div class="faq-content">
-                        <p>The certificate will be sent to the email address provided by you at the time of donation upon successful completion of the transaction. Alternately, a physical copy will be posted to the address provided by you at the time of donation.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>Where is my money spent?</summary>
-                    <div class="faq-content">
-                        <p>Your support helps us provide care and dignity to disadvantaged older persons across India under the following programmes – Agecare, Healthcare and Livelihoods & Disaster Management.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>How to contact if I have any queries?</summary>
-                    <div class="faq-content">
-                        <p>For general enquiries, please write to headoffice@helpageindia.org.
-                            To get in touch with one of our State offices, please click on the following link:
-                            Contact Us page link</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>How can I donate to your organization?</summary>
-                    <div class="faq-content">
-                        <p>Please click on the following link where you can select your preferred mode of contribution.</p>
-                    </div>
-                </details>
-            </div>
-            <script>
-                const details = document.querySelectorAll("details");
-        
-                details.forEach((targetDetail) => {
-                    targetDetail.addEventListener("click", function () {
-                        // Close other open details
-                        details.forEach((detail) => {
-                            if (detail !== targetDetail) {
-                                detail.removeAttribute("open");
-                                let content = detail.querySelector(".faq-content");
-                                content.style.maxHeight = "0";
-                                content.style.opacity = "0";
-                            }
-                        });
-        
-                        // Handle opening animation
-                        let content = this.querySelector(".faq-content");
-                        if (this.hasAttribute("open")) {
-                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
-                            content.style.opacity = "1";
-                        } else {
-                            content.style.maxHeight = "0"; // Collapse
-                            content.style.opacity = "0";
-                        }
-                    });
-        
-                    targetDetail.addEventListener("toggle", function () {
-                        let content = this.querySelector(".faq-content");
-                        if (this.open) {
-                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
-                            content.style.opacity = "1";
-                        } else {
-                            content.style.maxHeight = "0"; // Collapse
-                            content.style.opacity = "0";
-                        }
-                    });
-                });
-            </script>
-            <div style="display: flex; gap: 2px; height: 200px; background-color: rgb(59, 59, 59);top: 5%;">
-                <div>
-                    <h1 style="position: relative; left: 50%; color: white;">How To Reach Us !</h1>
-                    <h3 style=" position: relative; color: white;left: 50%;">Stay up-to-date with all our latest developments and work</h3>
-                    <input style="position: relative; left: 50%; background-color:rgb(0, 0, 0); width: 400px; " type="email" value="Enter your email" required/>
-                    <input style="position: relative; left: 50%; background-color: rgb(255, 0, 0); width: 200px; "type="submit" value="Submit"/>
-                </div>
-            </div>
-            <footer>
-                <div class="footer">
-                <div class="row">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="row">
-                    <ul>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Career</a></li>
-                    </ul>
-                    </div>
-                    
-                    <div class="row">
-                    SEWASETU Copyright © 2025 - All rights reserved 
-                    </div>
-                    </div>
-                    </footer>	
-    </body>
+        <div class="row">
+        SEWASETU Copyright © 2025 - All rights reserved 
+        </div>
+        </div>
+        </footer>	
+</body>
 </html>
