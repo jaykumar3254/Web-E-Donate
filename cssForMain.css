@@ -112,9 +112,10 @@ body::-webkit-scrollbar {
     padding: 10px;
 }
 .logo {
-    align-self: flex-start;
+    align-items: right;
     height: 60px;
     width: 60px;
+    
 }
 .imgtextactive {
     font-family: 'Times New Roman', Times, serif;
