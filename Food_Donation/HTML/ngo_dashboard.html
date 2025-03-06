@@ -15,7 +15,7 @@
         <h2>NGO Dashboard</h2>
         <ul>
             <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
-            <li><a href="./logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
     </div>
 
@@ -24,7 +24,7 @@
         
         <!-- Header -->
         <header>
-            <h1>Welcome, [NGO Name]</h1>
+            <h1>Welcome, <span id="ngo-name">[NGO Name]</span></h1>
             <p>Manage food donations efficiently</p>
         </header>
 
@@ -65,6 +65,38 @@
             </table>
         </section>
     </div>
+
+    <script>
+        // ✅ Fetch and Display Logged-in NGO's Name
+        async function loadNgoData() {
+            const ngoId = localStorage.getItem("ngoId");
+            if (!ngoId) {
+                alert("Unauthorized access! Redirecting to login.");
+                window.location.href = "ngo_login_register.html";
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:5000/ngo/dashboard/${ngoId}`);
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById("ngo-name").textContent = data.ngo_name;
+                } else {
+                    alert("Failed to fetch NGO data.");
+                }
+            } catch (error) {
+                console.error("Error fetching NGO data:", error);
+            }
+        }
+
+        // ✅ Handle Logout
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("ngoId");
+            window.location.href = "ngo_login_register.html";
+        });
+
+        loadNgoData(); // Load NGO name when the page loads
+    </script>
 
 </body>
 </html>
