@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Help Donation</title>
+    <link rel="stylesheet" href="childsupport.css"/>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="childsupport.js" defer></script> <!-- Load script after DOM -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button active">Home</a>
+        <a href="about_us.html" class="nav-button ">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="get-involved.html" class="nav-button ">Get Involved</a>
+        <a href="./user_login_register.html" class="nav-button">Donate</a>
+
+    </nav>
+    <div class="typewriter-container0">
+
+        <h1>EVERY CHILD DESERVE's</h1>
+    </div>
+    <!-- Typewriter Text Overlay -->
+    <div class="typewriter-container">
+        <h1 class="typewriter-text"></h1>
+    </div>
+   
+    <img src="content/study_web.jpg" height="40%" width="100%"/>
+    
+    <section class="header">
+        <h1>SEWA-SETU</h1>
+    </section>
+    
+        <section class="org-info">
+            <h2>Connecting NGOs with People in Need</h2>
+            <p>
+                SEWA-SETU bridges the gap between <span class="highlight">NGOs</span> and individuals seeking assistance. 
+                We offer multiple <span class="highlight">online payment facilities</span> that support not only 
+                <span class="highlight">children</span>, but also the <span class="highlight">elderly</span>, 
+                <span class="highlight">blood donation drives</span>, 
+                <span class="highlight">meal distributions</span>, <span class="highlight">toy donations</span>, and more.
+            </p>
+        </section>
+        
+    <section id="interactive-images" class="interactive-section">
+        <h2>Explore Our Work</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="content/help.jpg" alt="Education Support">
+                <div class="info">Providing quality education to underprivileged children.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/dadiji1.webp" alt="Healthcare">
+                <div class="info">Organizing free medical camps and healthcare support.</div>
+            </div>
+            <div class="image-item">
+                <img src="content/gift.jpg" alt="Food Support">
+                <div class="info">Delivering meals to children in need.</div>
+            </div>
+        </div>
+    </section>
+    <h1 class="scroll-text">
+        <span class="left-text">DOTS</span>
+        <span class="right-text">OF HOPE</span>
+    </h1>
+
+    <div class="impact-section">
+        <h2>Our Impact</h2>
+    </div>    
+<!-- Move the text outside of map-container -->
+
+<div class="map-container">
+    <!-- India Map -->
+
+    <img src="content/india-map.webp" alt="India Map" class="india-map">
+    <div id="floating-dots"></div>
+    <!-- Red Dots -->
+    <div class="location-dot" style="top: 35%; left: 45%;">
+        <div class="infobox">
+            <img src="content/help.jpg" alt="Delhi" />
+            <p>Delhi - "Rescuing abandoned children and offering rehabilitation. Your kindness changes lives.</p>
+        </div>
+    </div>
+    
+    <div class="location-dot" style="top: 60%; left: 40%;">
+        <div class="infobox">
+            <img src="content/happboys.jpg" alt="Mumbai" />
+            <p>Mumbai - "Providing shelter and education to 500+ underprivileged children. Support their future today!"</p>
+        </div>
+    </div>
+    
+    <div class="location-dot" style="top: 70%; left: 44%;">
+        <div class="infobox">
+            <img src="content/kidimg1.jpg" alt="Bangalore" />
+            <p>Bangalore - "Nutritional aid for street children. Every meal brings hope. Donate now!"</p>
+        </div>
+    </div>
+    
+    <div class="location-dot" style="top: 49%; left: 38%;">
+        <div class="infobox">
+            <img src="content/kidschool.jpg" alt="Jaipur" />
+            <p>Jaipur - "Medical support for orphaned kids. Your help ensures a healthy future."</p>
+        </div>
+    </div>
+    
+    
+</div>    
+
+ <!-- Info Box -->
+<!-- Info Box for Location Details -->
+<div class="red-dot" data-info="This is location info">
+    <div class="infobox">This is location info</div>
+</div>
+
+
+
+
+    <section id="newsletter" class="newsletter-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="validateEmail()">Subscribe</button>
+        <div id="error-message" class="error-message"></div>
+    </section>
+
+</body>
+      <footer>
+        <div class="footer">
+        <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+            </div>
+            
+            <div class="row">
+            SEWASETU Copyright © 2025 - All rights reserved 
+            </div>
+            </div>
+            </footer>	
+
+    
+
+</html>

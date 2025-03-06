@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-button:hover {
+    border-color: red;
+}
+
+.nav-button:hover, .active {
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 80px; /* Adjust spacing for navbar */
+}
+
+#image1 {
+    width: 100%;
+    height: auto;
+    filter: blur(1px);
+    display: block;
+}
+
+.quote-container {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.quote-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    color: white;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* What We Do Section */
+.steps-info {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.steps-info h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.steps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.step-card {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 12px rgba(255, 0, 0, 0.3);
+    padding: 20px;
+    border: 3px 3px 12px rgba(255, 0, 0, 0.3);;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-card h3 {
+    font-size: 22px;
+    color: #ffcc00;
+}
+
+.step-card p {
+    font-size: 16px;
+    color: #bbbbbb;
+}
+
+
+
+/*Footer part */
+.footer{
+    
+    position: relative;
+    text-align: center;
+    background: black;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
