@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig-Zag Glowing Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            margin-top: 80px;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000000;
+            padding: 50px 0;
+        }
+
+        .card-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 60%;
+            height: 50vh; /* Set height to 50% of the viewport */
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            background: cyan;
+            color: #121212;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 10px cyan;
+        }
+
+        /* Zig-zag alignment */
+        .card:nth-child(odd) {
+            align-self: flex-end;
+            margin-right: 10%;
+        }
+
+        .card:nth-child(even) {
+            align-self: flex-start;
+            margin-left: 10%;
+        }
+
+        /* Background images */
+        .card:nth-child(1) { background-image: url('/content/study_web.jpg'); }
+        .card:nth-child(2) { background-image: url('/content/dadiji1.webp'); }
+        .card:nth-child(3) { background-image: url('/Food_Donation/SRC/hungry_boi.jpg'); }
+        .card:nth-child(4) { background-image: url('/Food_Donation/SRC/donation.avif'); }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 80%;
+                height: 40vh; /* Adjust height for smaller screens */
+            }
+            .card:nth-child(odd), .card:nth-child(even) {
+                align-self: center;
+                margin: 0;
+            }
+        }
+        
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  position: relative;
+  right: 0.001%;
+  justify-content: right;
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover, .active {
+  background-color: red;
+  border-radius: 5px;
+}
+  
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button">Home</a>
+        <a href="about_us.html" class="nav-button">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="get-involved.html" class="nav-button">Get Involved</a>
+        <a href="donate.html" class="nav-button active">Donate</a>
+    </nav>
+    <div class="card-container">
+        <div class="card">
+            <div class="overlay">
+                <h2>Help Children</h2>
+                <p>A small act of kindness today can spark a lifetime of learning. Education changes the world—your donation makes it possible.</p>
+                <a href="#" class="btn">Donate Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="overlay">
+                <h2>Support Older </h2>
+                <p>They spent their lives caring for us—now it's our turn to give back. A small donation can bring comfort, dignity, and hope to the elderly.</p>
+                <a href="#" class="btn">Donate Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="overlay">
+                <h2>Food Donation</h2>
+                <p>Hunger knows no boundaries, but neither does kindness. Your small donation can fill a plate and bring hope to those in need.</p>
+                <a href="#" class="btn">Donate Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="overlay">
+                <h2>Toy And Clothes</h2>
+                <p>A small gift of toys and clothes can bring warmth, joy, and smiles to those who need it most. Share kindness, spread happiness!</p>
+                <a href="#" class="btn">Donate Now</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
