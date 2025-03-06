@@ -114,3 +114,35 @@ function setAmount(value) {
 function completdonation(){
     window.location.href="registration.html";
 }
+document.getElementById("donationForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.getElementById("name").value,
+        mo_no: document.getElementById("Mo-no").value,
+        email: document.getElementById("email").value,
+        aadhar: document.getElementById("aadhar").value,
+        amount: document.getElementById("amount").value,
+        supportTo: document.getElementById("supportTo").value,
+        payment: document.getElementById("payment").value
+    };
+
+    console.log("📤 Sending Data:", formData);  // Debugging
+
+    fetch("http://localhost:5000/donate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("✅ Response from Server:", data);
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error("❌ Error:", error);
+        alert("Failed to send donation.");
+    });
+});

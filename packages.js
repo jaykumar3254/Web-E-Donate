@@ -224,3 +224,79 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.amount-header span:last-child').textContent = `₹ ${totalAmount}`;
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const infoContainer = document.querySelector(".info-container");
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      { threshold: 0.4 } 
+    );
+  
+    observer.observe(infoContainer);
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoContainer = document.querySelector(".container");
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      { threshold: 0.4 } 
+    );
+  
+    observer.observe(infoContainer);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoContainer = document.querySelector(".add-logo-btn");
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      { threshold: 0.4 } 
+    );
+  
+    observer.observe(infoContainer);
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoContainer = document.querySelector(".donation-panel");
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      { threshold: 0.4 } 
+    );
+  
+    observer.observe(infoContainer);
+  });
+
+

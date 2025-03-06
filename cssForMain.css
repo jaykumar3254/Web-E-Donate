@@ -1,27 +1,43 @@
 /* General styles for the body */
 body {
+    background-color: black;
     margin: 0;
     margin-top: 60px;
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
+
 html{
     overflow-y: scroll;
 }
+
+/* Navigation Bar */
 .navbar {
-    contain: content;
     display: flex;
-    height: 40px; /* Adjusted height for better visibility */
-    justify-content: flex-end; /* Align elements to the right */
-    background-color: black; /* Dark background color */
-    padding: 10px 0px; /* Add some padding */
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Ensure it stays at the top */
-    left: 0; /* Stretch to the full width of the page */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it appears above other elements */
-    
+    position: relative;
+    right: 0.001%;
+    justify-content: right;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .active {
+    background-color: red;
+    border-radius: 5px;
+}
+
 .color-yellow {
     color: #ffe800 !important
   }
@@ -60,31 +76,11 @@ video {
     height: auto;
     display: block;
 }
-/* Button styles */
-.nav-button {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
-    padding: 10px 10px; /* Padding around the text */
-    margin: 5 10px; /* Space between buttons */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid transparent; /* Border for hover effect */
-    border-radius: 0px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth hover transition */
-}
 
-/* Hover effect */
-.nav-button:hover {
-    border-color: red; /* Add border on hover */
-}
 body::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, Edge */
 }
-/* Active button styles */
-.active {
-    background-color: red; /* Highlighted background */
-    color: white; /* White text */
-    border-color: rgb(105, 13, 13); /* Border matching active background */
-}
+
 .video-text {
     position: absolute;
     top: 70%;
@@ -111,11 +107,7 @@ body::-webkit-scrollbar {
     text-align: center;
     padding: 10px;
 }
-.logo {
-    align-self: flex-start;
-    height: 60px;
-    width: 60px;
-}
+
 .imgtextactive {
     font-family: 'Times New Roman', Times, serif;
     position: absolute;

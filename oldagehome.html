@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head style="background-color: black;">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MAD</title>
-        <link rel="stylesheet" href="oldagehome.css">
-    </head>
-    <body style="background-color: black;">
-        <nav class="navbar">
-            <a href="covid.html" class="nav-button">COVID-19 SUPPORT</a>
-            <a href="#about" class="nav-button">CNCP</a>
-            <a href="#services" class="nav-button">WHAT WE DO</a>
-            <a href="#portfolio" class="nav-button">VOLUNTEER</a>
-            <a href="#contact" class="nav-button active">DONATE</a>
-        </nav>
-        <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <img class="backimgs" src="content/bacccha.jpg" />-->
-        <form action="registration.html" method="get">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+<head style="background-color: black;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD</title>
+    <link rel="stylesheet" href="oldagehome.css">
+</head>
+<body style="background-color: black;">
 
-            <label for="Mo-no">Mobile No:</label>
-            <input type="tel" id="Mo-no" name="mo-no" placeholder="Enter Mobile " required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button">Home</a>
+        <a href="about_us.html" class="nav-button">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="get-involved.html" class="nav-button">Get Involved</a>
+        <a href="donate.html" class="nav-button active">Donate</a>
+    </nav>
+
+    <iframe class="ytvideo" src="https://www.youtube.com/embed/120PSy10PYc?si=dp2-la09i7stSDqC" allowfullscreen></iframe>
+
+    <form id="donationForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+        <label for="Mo-no">Mobile No:</label>
+        <input type="tel" id="Mo-no" name="mo-no" placeholder="Enter Mobile " required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
 
             <label for="Aadhar">Aadhar Number:</label>
             <input type="text" id="aadhar" name="aadhar" pattern="[0-9]{12}" maxlength="12" placeholder="Enter 12-digit Aadhaar number" inputmode="numeric" required>
@@ -110,145 +112,145 @@
         
             <script src="oldagehome.js"></script>  -->
 
-            <div style="padding-top: 100px;" class="container">
-                <div class="stats">
-                    <div class="card">
-                        <span class="icon">♿</span>
-                        <h2>80,000</h2>
-                        <p>Elders received primary healthcare at their doorstep</p>
-                    </div>
+<div style="padding-top: 100px;" class="container">
+    <div class="stats">
+        <div class="card">
+            <span class="icon">♿</span>
+            <h2>80,000</h2>
+            <p>Elders received primary healthcare at their doorstep</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">💳</span>
+            <h2>100,000</h2>
+            <p>Elders became independent through Elder Self-Help-Groups</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">💛</span>
+            <h2>150,000</h2>
+            <p>Elders received support through the Elder Helpline</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">👁️</span>
+            <h2>55,000</h2>
+            <p>Elders received vision restoration support</p>
+        </div>
+
+        <div class="card">
+            <span class="icon">🤝</span>
+            <h2>65,000</h2>
+            <p>Elders received digital, financial, and legal literacy</p>
+        </div>
+    </div>
+</div>
+<div class="faq-container">
+
+    <details>
+        <summary>Will i get a tax exemption for my donation ?</summary>
+        <div class="faq-content">
+            <p>Yes, you will receive a 50% tax reduction certificate under Section 80G, which will be sent to your registered email address or postal address.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>How do I receive my 80G certificate?</summary>
+        <div class="faq-content">
+            <p>The certificate will be sent to the email address provided by you at the time of donation upon successful completion of the transaction. Alternately, a physical copy will be posted to the address provided by you at the time of donation.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Where is my money spent?</summary>
+        <div class="faq-content">
+            <p>Your support helps us provide care and dignity to disadvantaged older persons across India under the following programmes – Agecare, Healthcare and Livelihoods & Disaster Management.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>How to contact if I have any queries?</summary>
+        <div class="faq-content">
+            <p>For general enquiries, please write to headoffice@helpageindia.org.
+                To get in touch with one of our State offices, please click on the following link:
+                Contact Us page link</p>
+        </div>
+    </details>
+    <details>
+        <summary>How can I donate to your organization?</summary>
+        <div class="faq-content">
+            <p>Please click on the following link where you can select your preferred mode of contribution.</p>
+        </div>
+    </details>
+</div>
+<script>
+    const details = document.querySelectorAll("details");
+
+    details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", function () {
+            // Close other open details
+            details.forEach((detail) => {
+                if (detail !== targetDetail) {
+                    detail.removeAttribute("open");
+                    let content = detail.querySelector(".faq-content");
+                    content.style.maxHeight = "0";
+                    content.style.opacity = "0";
+                }
+            });
+
+            // Handle opening animation
+            let content = this.querySelector(".faq-content");
+            if (this.hasAttribute("open")) {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                content.style.opacity = "1";
+            } else {
+                content.style.maxHeight = "0"; // Collapse
+                content.style.opacity = "0";
+            }
+        });
+
+        targetDetail.addEventListener("toggle", function () {
+            let content = this.querySelector(".faq-content");
+            if (this.open) {
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand
+                content.style.opacity = "1";
+            } else {
+                content.style.maxHeight = "0"; // Collapse
+                content.style.opacity = "0";
+            }
+        });
+    });
+</script>
+<div style="display: flex; gap: 2px; height: 200px; background-color: rgb(59, 59, 59);top: 5%;">
+    <div>
+        <h1 style="position: relative; left: 50%; color: white;">How To Reach Us !</h1>
+        <h3 style=" position: relative; color: white;left: 50%;">Stay up-to-date with all our latest developments and work</h3>
+        <input style="position: relative; left: 50%; background-color:rgb(0, 0, 0); width: 400px; " type="email" value="Enter your email" required/>
+        <input style="position: relative; left: 50%; background-color: rgb(255, 0, 0); width: 200px; "type="submit" value="Submit"/>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
         
-                    <div class="card">
-                        <span class="icon">💳</span>
-                        <h2>100,000</h2>
-                        <p>Elders became independent through Elder Self-Help-Groups</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">💛</span>
-                        <h2>150,000</h2>
-                        <p>Elders received support through the Elder Helpline</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">👁️</span>
-                        <h2>55,000</h2>
-                        <p>Elders received vision restoration support</p>
-                    </div>
-        
-                    <div class="card">
-                        <span class="icon">🤝</span>
-                        <h2>65,000</h2>
-                        <p>Elders received digital, financial, and legal literacy</p>
-                    </div>
-                </div>
-            </div>
-            <div class="faq-container">
-        
-                <details>
-                    <summary>Will i get a tax exemption for my donation ?</summary>
-                    <div class="faq-content">
-                        <p>Yes, you will receive a 50% tax reduction certificate under Section 80G, which will be sent to your registered email address or postal address.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>How do I receive my 80G certificate?</summary>
-                    <div class="faq-content">
-                        <p>The certificate will be sent to the email address provided by you at the time of donation upon successful completion of the transaction. Alternately, a physical copy will be posted to the address provided by you at the time of donation.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>Where is my money spent?</summary>
-                    <div class="faq-content">
-                        <p>Your support helps us provide care and dignity to disadvantaged older persons across India under the following programmes – Agecare, Healthcare and Livelihoods & Disaster Management.</p>
-                    </div>
-                </details>
-        
-                <details>
-                    <summary>How to contact if I have any queries?</summary>
-                    <div class="faq-content">
-                        <p>For general enquiries, please write to headoffice@helpageindia.org.
-                            To get in touch with one of our State offices, please click on the following link:
-                            Contact Us page link</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>How can I donate to your organization?</summary>
-                    <div class="faq-content">
-                        <p>Please click on the following link where you can select your preferred mode of contribution.</p>
-                    </div>
-                </details>
-            </div>
-            <script>
-                const details = document.querySelectorAll("details");
-        
-                details.forEach((targetDetail) => {
-                    targetDetail.addEventListener("click", function () {
-                        // Close other open details
-                        details.forEach((detail) => {
-                            if (detail !== targetDetail) {
-                                detail.removeAttribute("open");
-                                let content = detail.querySelector(".faq-content");
-                                content.style.maxHeight = "0";
-                                content.style.opacity = "0";
-                            }
-                        });
-        
-                        // Handle opening animation
-                        let content = this.querySelector(".faq-content");
-                        if (this.hasAttribute("open")) {
-                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
-                            content.style.opacity = "1";
-                        } else {
-                            content.style.maxHeight = "0"; // Collapse
-                            content.style.opacity = "0";
-                        }
-                    });
-        
-                    targetDetail.addEventListener("toggle", function () {
-                        let content = this.querySelector(".faq-content");
-                        if (this.open) {
-                            content.style.maxHeight = content.scrollHeight + "px"; // Expand
-                            content.style.opacity = "1";
-                        } else {
-                            content.style.maxHeight = "0"; // Collapse
-                            content.style.opacity = "0";
-                        }
-                    });
-                });
-            </script>
-            <div style="display: flex; gap: 2px; height: 200px; background-color: rgb(59, 59, 59);top: 5%;">
-                <div>
-                    <h1 style="position: relative; left: 50%; color: white;">How To Reach Us !</h1>
-                    <h3 style=" position: relative; color: white;left: 50%;">Stay up-to-date with all our latest developments and work</h3>
-                    <input style="position: relative; left: 50%; background-color:rgb(0, 0, 0); width: 400px; " type="email" value="Enter your email" required/>
-                    <input style="position: relative; left: 50%; background-color: rgb(255, 0, 0); width: 200px; "type="submit" value="Submit"/>
-                </div>
-            </div>
-            <footer>
-                <div class="footer">
-                <div class="row">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="row">
-                    <ul>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Career</a></li>
-                    </ul>
-                    </div>
-                    
-                    <div class="row">
-                    SEWASETU Copyright © 2025 - All rights reserved 
-                    </div>
-                    </div>
-                    </footer>	
-    </body>
+        <div class="row">
+        SEWASETU Copyright © 2025 - All rights reserved 
+        </div>
+        </div>
+        </footer>	
+</body>
 </html>

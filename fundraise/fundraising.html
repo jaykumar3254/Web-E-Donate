@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising Request Form</title>
+    <link rel="stylesheet" href="fundraising.css">
+</head>
+<body>
+    <h1>Fundraising Request Form</h1>
+    <form id="fundraising-form" enctype="multipart/form-data">
+        <label>NGO Name:</label>
+        <input type="text" id="ngo_name" name="ngo_name" required><br>
+
+        <label>Reason for Fundraising:</label>
+        <input type="text" id="reason" name="reason" required><br>
+
+        <label>Upload Victim Image:</label>
+        <input type="file" id="image" name="image" required><br>
+
+        <label>Target Amount (₹):</label>
+        <input type="number" id="target_amount" name="target_amount" required><br>
+        
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <script src="fundraising.js"></script>
+</body>
+</html>
