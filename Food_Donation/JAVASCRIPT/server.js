@@ -19,6 +19,35 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 0
 });
+
+const nodemailer = require("nodemailer");
+
+// ✅ Email Configuration
+const transporter = nodemailer.createTransport({
+    service: "gmail", // Change this if using another service
+    auth: {
+        user: process.env.EMAIL_USER, // Your email (from .env)
+        pass: process.env.EMAIL_PASS  // Your app password (from .env)
+    }
+});
+
+// ✅ Function to Send Email
+async function sendDonationAcceptedEmail(donorEmail, donorName, ngoName) {
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: donorEmail,
+        subject: "Your Donation Has Been Accepted!",
+        text: `Dear ${donorName},\n\nThank you for your donation! Your food donation has been accepted by ${ngoName}. We appreciate your generosity.\n\nBest regards,\nFood Donation Platform`
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        console.log(`✅ Email sent to ${donorEmail}`);
+    } catch (error) {
+        console.error("❌ Email Sending Error:", error);
+    }
+}
+
 // ✅ Ensure Tables Exist
 async function setupDatabase() {
     try {
@@ -238,7 +267,7 @@ app.get("/donations", async (req, res) => {
     }
 });
 
-// 🟢 ACCEPT DONATION (Assign donation to an NGO)
+// 🟢 ACCEPT DONATION (Assign donation to an NGO & Notify User)
 app.patch("/donations/:id/accept/:ngoId", async (req, res) => {
     try {
         const { id, ngoId } = req.params;
@@ -253,10 +282,23 @@ app.patch("/donations/:id/accept/:ngoId", async (req, res) => {
             return res.status(400).json({ error: "Donation has already been accepted" });
         }
 
+        // Get donor details
+        const { name: donorName, email: donorEmail } = existingDonation[0];
+
+        // Get NGO Name
+        const [ngo] = await pool.execute("SELECT ngo_name FROM ngo WHERE id = ?", [ngoId]);
+        if (ngo.length === 0) {
+            return res.status(404).json({ error: "NGO not found" });
+        }
+        const ngoName = ngo[0].ngo_name;
+
         // Assign donation to NGO
         await pool.execute("UPDATE food_donations SET status = 'accepted', assigned_ngo_id = ? WHERE id = ?", [ngoId, id]);
 
-        res.json({ message: "Donation assigned to NGO successfully!" });
+        // Send email notification to donor
+        sendDonationAcceptedEmail(donorEmail, donorName, ngoName);
+
+        res.json({ message: "Donation assigned to NGO successfully & email sent!" });
     } catch (err) {
         console.error("❌ Accept Donation Error:", err.message);
         res.status(500).json({ error: "Failed to assign donation", details: err.message });
