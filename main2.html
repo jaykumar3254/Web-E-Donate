@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://makeadiff.in/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="https://makeadiff.in/css/style.css" type="text/css">
   <link rel="stylesheet" href="main2.css" type="text/css">
-
+  <link rel="stylesheet" href="animate.css" type="text/css">
   
 
 </head>
@@ -41,8 +41,8 @@
 
     
     <iframe width="460" height="315" src="https://www.youtube.com/embed/3-PXNnaatx4?si=dCA9PhMPL3Lg5yuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <section class="care-collective">
-     <div class="lightbox">
+    <section class="care-collective animate-on-scroll">
+     <div class="lightbox animate-on-scroll">
 
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
@@ -62,7 +62,7 @@
     <button class="btn btn-theme" id="close-button">Close</button>
   </div>
 </div>
-                        <div class="wrapper">
+                        <div class="wrapper animate-on-scroll">
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-12 section-inner highdark_background">
                                     <h2><span class="badge badge-danger bg-yellow">Take Action:</span> Join the #care<span class="color-madred">collective</span></h2>
@@ -78,8 +78,8 @@
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-12 cta-right">
                                     <div class="center">
-                                        <div class="hit-counter">
-                                            <h2 id="care-counter-static" class="number-counter-static">50+</h2>
+                                        <div class="hit-counter ">
+                                            <h2 id="care-counter-static" class="number-counter">50+</h2>
                                             <p>Members till now</p>
                                         </div>
                                         <a class="btn btn-theme" id="join_community_disabled" href="donateforwordbtn.html">
@@ -347,7 +347,81 @@
 </div>
 
 
+<script>
+    // Combined Animation Logic
+    (function() {
+        // Configure animation settings
+        const config = {
+            scrollThreshold: 0.2,
+            numberDuration: 2000,
+            decimalNumbers: false
+        };
 
+        // Initialize Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: config.scrollThreshold
+        });
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Scroll animation
+                    entry.target.classList.add('visible');
+                    
+                    // Number animation
+                    const numberElement = entry.target.querySelector('.number-counter') || entry.target;
+                    if (numberElement.classList.contains('number-counter')) {
+                        animateNumber(numberElement);
+                    }
+                    
+                    // Stop observing after animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        function animateNumber(element) {
+            const target = parseFloat(element.dataset.target);
+            const start = parseFloat(element.textContent);
+            const duration = config.numberDuration;
+            let startTime;
+
+            function updateNumber(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / duration, 1);
+                
+                // Smooth easing function
+                const current = start + (easeOutQuad(percentage) * (target - start));
+                
+                // Format number display
+                element.textContent = config.decimalNumbers ? 
+                    current.toFixed(1) : 
+                    Math.floor(current).toLocaleString();
+
+                if (percentage < 1) {
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    element.textContent = config.decimalNumbers ? 
+                        target.toFixed(1) : 
+                        target.toLocaleString();
+                }
+            }
+
+            requestAnimationFrame(updateNumber);
+        }
+
+        // Easing function for smooth animation
+        function easeOutQuad(t) {
+            return t * (2 - t);
+        }
+    })();
+</script>
 
 
 </body>
