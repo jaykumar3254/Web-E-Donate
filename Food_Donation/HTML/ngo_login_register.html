@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Login & Registration</title>
+    <link rel="stylesheet" href="../CSS/ngo_login_registration.css">
+    <script defer src="../JAVASCRIPT/ngo_login_register.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="./food_donation_home.html" class="nav-button">Home</a>
+        <a href="about_us.html" class="nav-button">About Us</a>
+        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="./get_involved.html" class="nav-button ">Get Involved</a>
+        <a href="./ngo_login_register.html" class="nav-button active">Help as NGO</a>
+        <a href="./user_login_register.html" class="nav-button">Donate</a>
+    </nav>
+
+    <!-- Authentication Container -->
+    <div class="auth-container" id="auth-container">
+        <h2 id="form-title">NGO Login</h2>
+        <form id="auth-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="auth-button">Login</button>
+        </form>
+        <p id="toggle-text">Don't have an account? <a href="#" id="toggle-form">Register</a></p>
+    </div>
+</body>
+</html>

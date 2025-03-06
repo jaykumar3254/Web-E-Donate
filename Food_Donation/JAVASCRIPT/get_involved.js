@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click to Navigate to Registration Page
     document.querySelectorAll(".ngopartner").forEach(card => {
         card.addEventListener("click", function () {
-            window.location.href = "../HTML/registration.html"; // Update with actual path
+            window.location.href = "../HTML/user_login_register.html"; // Update with actual path
         });
     });
 

@@ -1,11 +1,109 @@
+/* Styling for the body */
 body {
-    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
 }
+
+/* Form container styling */
 form {
-    width: 300px;
+    background: linear-gradient(135deg, #111, #222);
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 450px;
     margin: auto;
+    box-shadow: 0 0 15px red;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
 }
-input, textarea {
+
+/* Heading Styling */
+h1 {
+    color: red;
+    text-shadow: 3px 3px 6px black;
+    font-size: 28px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Labels styling */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Input fields styling */
+input {
     width: 100%;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid red;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+input:focus {
+    border-color: red;
+    box-shadow: 0 0 8px red;
+    outline: none;
+}
+
+/* File input styling */
+input[type="file"] {
+    border: none;
+    color: white;
+}
+
+/* Submit Button Styling */
+button {
+    background-color: red;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: black;
+    color: red;
+    box-shadow: 0 0 15px red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
 }
