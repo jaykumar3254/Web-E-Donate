@@ -1,109 +1,79 @@
-/* Styling for the body */
 body {
     background-color: black;
     color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 20px; /* Moves content down slightly */
 }
 
-/* Form container styling */
-form {
-    background: linear-gradient(135deg, #111, #222);
-    border: 2px solid red;
-    border-radius: 15px;
-    padding: 25px;
-    max-width: 450px;
-    margin: auto;
-    box-shadow: 0 0 15px red;
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Heading Styling */
 h1 {
-    color: red;
-    text-shadow: 3px 3px 6px black;
-    font-size: 28px;
-    animation: slideIn 1s ease-in-out;
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 20px; /* Ensures heading is at the top */
 }
 
-/* Labels styling */
+form {
+    background-color: #111;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px red;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Adjust form position */
+}
+
 label {
-    font-size: 18px;
-    font-weight: bold;
+    align-self: flex-start;
     color: red;
-    display: block;
-    margin-top: 15px;
-    text-align: left;
-    animation: fadeIn 1.5s ease-in-out;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Input fields styling */
-input {
+input[type="text"], 
+input[type="number"], 
+input[type="file"] {
     width: 100%;
     padding: 10px;
-    margin-top: 8px;
+    margin-top: 5px;
     border: 2px solid red;
-    border-radius: 8px;
-    background-color: #222;
+    background-color: black;
     color: white;
-    transition: all 0.3s ease-in-out;
-    animation: fadeInUp 1.2s ease-in-out;
-}
-
-input:focus {
-    border-color: red;
-    box-shadow: 0 0 8px red;
+    border-radius: 5px;
     outline: none;
+    transition: 0.3s;
 }
 
-/* File input styling */
-input[type="file"] {
-    border: none;
-    color: white;
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="file"]:focus {
+    border-color: white;
+    box-shadow: 0 0 10px red;
 }
 
-/* Submit Button Styling */
 button {
     background-color: red;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px;
-    width: 100%;
+    color: white;
     border: none;
-    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
     margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    animation: pulse 1.5s infinite alternate;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: black;
-    color: red;
-    box-shadow: 0 0 15px red;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
+    background-color: darkred;
+    box-shadow: 0 0 10px red;
 }
