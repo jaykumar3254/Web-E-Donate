@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Donation UI</title>
     <link rel="stylesheet" href="packages.css">
+    <link rel="stylesheet" href="/chatbot/chatbot.css">
     <!-- Add this in the <head> section -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="packages.js"></script>
@@ -169,7 +170,31 @@
         </div>
       </div>
     </div>
+  <!-- Chatbot Icon -->
+  <div id="chatbot-icon">
+    <img src="/images/iconbr.png" alt="Chatbot Icon" id="chatbot-image">
+</div>
 
+<!-- Chatbot Popup Window -->
+<div id="chat-popup">
+    <div id="chat-header">
+        <span>Chatbot</span>
+        <span id="close-chat" style="cursor: pointer;">&times;</span>
+    </div>
+
+    <div id="predefined-questions">
+        <button class="question-btn">What services do you offer?</button>
+        <button class="question-btn">How can I volunteer?</button>
+        <button class="question-btn">What are your working hours?</button>
+        <button class="question-btn">How can I donate food?</button>
+    </div>
+    <div id="chat-content"></div>
+    <div id="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+<script src="/chatbot/chatbot.js"></script>
     <!-- about section -->
 <div class="info-container">
   <img src="images/kid4.png" alt="Description" class="info-image">

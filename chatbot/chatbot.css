@@ -1,0 +1,116 @@
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 255, 255); /* More transparency */
+    border-radius: 70%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 3, 3, 0.755);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 50px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+#chatbot-icon img {
+    width: 50px; /* Adjust based on the icon size */
+    height: 50px;
+    border-radius: 70%; /* For round icons */
+}
+
+
+#predefined-questions {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.question-btn {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.question-btn:hover {
+    background-color: #e1e1e1;
+}
+#chat-popup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 600px; /* Slightly wider for better chat space */
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Glass effect for modern look */
+}
+
+#chat-header {
+    background-color: rgba(255, 0, 0, 0.7); /* Slightly transparent header */
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#chat-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    color: white; /* Text color for better contrast */
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+#chat-footer {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent footer */
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none; /* Remove default border */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent input */
+    color: white;
+}
+
+#chat-input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Lighter placeholder */
+}
+
+#send-btn {
+    margin-left: 10px;
+    background-color: rgba(255, 0, 0, 0.8); /* Transparent button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: rgba(179, 0, 0, 0.9); /* Darker on hover */
+}

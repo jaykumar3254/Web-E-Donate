@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zig-Zag Glowing Cards</title>
+    <link rel="stylesheet" href="/chatbot/chatbot.css">
     <style>
         * {
             margin: 0;
@@ -273,6 +274,33 @@
                 SEWASETU Copyright@ 2025 - All rights reserved
             </div>
         </div>
+      <!-- Chatbot Icon -->
+  <div id="chatbot-icon">
+    <img src="/images/iconbr.png" alt="Chatbot Icon" id="chatbot-image">
+</div>
+
+<!-- Chatbot Popup Window -->
+<div id="chat-popup">
+    <div id="chat-header">
+        <span>Chatbot</span>
+        <span id="close-chat" style="cursor: pointer;">&times;</span>
+    </div>
+
+    <div id="predefined-questions">
+        <button class="question-btn">What services do you offer?</button>
+        <button class="question-btn">How can I volunteer?</button>
+        <button class="question-btn">What are your working hours?</button>
+        <button class="question-btn">How can I donate food?</button>
+    </div>
+    <div id="chat-content"></div>
+    <div id="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+<script src="/chatbot/chatbot.js"></script>
+
+
     </footer>
 </body>
 </body>
