@@ -68,14 +68,19 @@
         </p>
     </div>
     <div class="numbers">
-      <div class="counter1" data-target="400000">0</div>
-      <h2 class="text">Daily Reports</h2>
-      <div class="counter" data-target="533570">0</div>
-      <h2 class="text">Actual Deaths</h2>
-      <div class="counter2" data-target="533570">44milion+</div>
-      <h2 class="text">recoveries</h2>
-    </div>
-    <script>
+      <div class="item">
+          <div class="counter1" data-target="400000">0</div>
+          <h2 class="text">Daily New Reports</h2>
+      </div>
+      <div class="item">
+          <div class="counter" data-target="533570">0</div>
+          <h2 class="text">Actual Deaths</h2>
+      </div>
+      <div class="item">
+          <div class="counter2" data-target="533570">44 million+</div>
+          <h2 class="text">Total Reports</h2>
+      </div>
+  </div><script>
       document.addEventListener("DOMContentLoaded", () => {
           const counter = document.querySelector(".counter");
           const target = +counter.getAttribute("data-target");
@@ -112,4 +117,20 @@
       });
   </script>
 </body>
+<footer>
+  <div class="footer">
+      <div class="row">
+          <ul>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Career</a></li>
+          </ul>
+      </div>
+      <div class="row">
+          SEWASETU Copyright@ 2025 - All rights reserved
+      </div>
+  </div>
+</footer>
 </html>
