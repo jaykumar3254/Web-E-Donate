@@ -185,7 +185,7 @@
                                         <div class="row team-section">
                                             <div class="col-md-4 col-lg-4 col-12">
                                                 <div class="the-team-box">
-                                                    <h1 class="number-counter">33</h1>
+                                                    <h1 class="counter1" data-target="18">33</h1>
                                                     <p>NGO's</p>
                                                 </div>
                                             </div>
@@ -377,6 +377,23 @@
             return t * (2 - t);
         }
     })();
+    document.addEventListener("DOMContentLoaded", () => {
+          const counter = document.querySelector(".counterr");
+          const target = +counter.getAttribute("data-target");
+          let count = 0;
+          const increment = target / 300; // Adjust speed here
+          
+          function updateCounter() {
+              if (count < target) {
+                  count += increment;
+                  counter.innerText = Math.floor(count);
+                  requestAnimationFrame(updateCounter);
+              } else {
+                  counter.innerText = target.toLocaleString();
+              }
+          }
+          updateCounter();
+      });
 </script>
 
 

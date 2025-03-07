@@ -5,6 +5,9 @@
   font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased
 }
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, Edge */
+}
 
 @font-face {
   font-family: "Gotham A";
