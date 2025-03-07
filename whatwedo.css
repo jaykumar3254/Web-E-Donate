@@ -7,16 +7,15 @@ body {
     padding: 0;
 }
 
-/* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+    position: relative;
+    right: 0.001%;
+    justify-content: right;
+    background-color: rgb(0, 0, 0);
     padding: 15px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -26,14 +25,14 @@ body {
     color: white;
     padding: 10px 15px;
     margin: 5px;
-    border: 2px solid transparent;
     transition: all 0.3s ease;
-    font-size: 1rem;
 }
 
-.nav-button:hover {
-    border-color: red;
+.nav-button:hover, .active {
+    background-color: red;
+    border-radius: 5px;
 }
+
 
 .nav-button:hover, .active {
     background-color: red;

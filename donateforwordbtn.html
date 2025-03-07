@@ -76,6 +76,68 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
+        .footer{
+    
+    position: relative;
+    text-align: center;
+    background: black;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+
 
         .btn {
             padding: 10px 18px;
@@ -105,7 +167,7 @@
         }
 
         /* Background images */
-        .card:nth-child(1) { background-image: url('/content/study_web.jpg'); }
+        .card:nth-child(1) { background-image: url("/content/study_web.jpg") }
         .card:nth-child(2) { background-image: url('/content/dadiji1.webp'); }
         .card:nth-child(3) { background-image: url('/Food_Donation/SRC/hungry_boi.jpg'); }
         .card:nth-child(4) { background-image: url('/Food_Donation/SRC/donation.avif'); }
@@ -156,11 +218,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="./food_donation_home.html" class="nav-button">Home</a>
-        <a href="about_us.html" class="nav-button">About Us</a>
-        <a href="./what_we_do.html" class="nav-button">What we do</a>
+        <a href="main2.html" class="nav-button">Home</a>
+        <a href="covid.html" class="nav-button">COVID-19</a>
+        <a href="whatwedo.html"class="nav-button">What we do</a>
         <a href="get-involved.html" class="nav-button">Get Involved</a>
-        <a href="donate.html" class="nav-button active">Donate</a>
+        <a href="donateforwordbtn.html" class="nav-button active">Donate</a>
     </nav>
     <div class="card-container">
         <div class="card">
@@ -195,6 +257,22 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                SEWASETU Copyright@ 2025 - All rights reserved
+            </div>
+        </div>
+    </footer>
+</body>
 </body>
 </html>
